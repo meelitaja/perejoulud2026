@@ -1,0 +1,1237 @@
+<!doctype html>
+<html lang="et">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Jõulud 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Pinyon+Script&display=swap">
+<style>
+/* Layout: phone-first column under a midnight hero band with garland lights; pearl + champagne + fir below (matches the Jõulud 2026 planner). Single light look. */
+:root{
+  --night:#F5F0E7; --pine:#FBF8F1; --pine-2:#DCE5DD; --line:rgba(198,170,120,.45); --track:#EAE3D3;
+  --gold:#193C32; --gold-soft:#2e5546; --cran:#692C38; --snow:#14213D; --mist:#4a4f60;
+  --champ:#C6AA78; --midnight:#0d1730; --midnight-2:#1a2a52; --pearl:#F5F0E7;
+  --display:"Cormorant Garamond","Cormorant",Garamond,"Times New Roman",serif;
+  --label:"Jost","Futura","Century Gothic",system-ui,sans-serif;
+  --script:"Pinyon Script","Snell Roundhand","Brush Script MT",cursive;
+  --body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+html,body{background:var(--night);color:var(--snow)}
+body{font-family:var(--body);font-size:17px;line-height:1.5;min-height:100%}
+*{box-sizing:border-box}
+h1,h2,h3{font-family:var(--display);font-weight:500;margin:0;text-wrap:balance;letter-spacing:.005em}
+p{margin:0}
+button,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@keyframes tw{0%,100%{opacity:1}50%{opacity:.35}}
+
+.hero{position:relative;overflow:hidden;isolation:isolate;text-align:center;color:var(--pearl);
+  margin-inline:calc(-1 * max(16px, env(safe-area-inset-left, 0px)));margin-top:-10px;padding:58px 20px 30px;
+  background:radial-gradient(120% 80% at 50% 0%,var(--midnight-2),var(--midnight) 75%);display:flex;flex-direction:column;align-items:center;gap:6px}
+@media (min-width:600px){.hero{margin-inline:0;border-radius:0 0 24px 24px}}
+.garland{position:absolute;top:0;left:0;width:100%;height:50px;z-index:-1}
+.garland circle{animation:tw 2.6s ease-in-out infinite}
+.hero .kicker{font-family:var(--label);font-size:.64rem;letter-spacing:.34em;text-transform:uppercase;color:var(--champ)}
+.hero h1{font-size:clamp(2.1rem,9vw,2.9rem);letter-spacing:.2em;padding-left:.2em;text-transform:uppercase;line-height:1;color:var(--pearl)}
+.hero .script{font-family:var(--script);font-size:1.8rem;color:var(--champ);line-height:1.1}
+.hero .snow{position:absolute;inset:0;z-index:-1;opacity:.5;background-image:radial-gradient(1.5px 1.5px at 12% 30%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 28% 70%,#fff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 46% 22%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 63% 58%,#fff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 81% 34%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 90% 76%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 6% 82%,#fff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 38% 88%,#fff 50%,transparent 51%)}
+.hero #modechip{margin-top:10px}
+.hero .chip{color:var(--champ);border-color:rgba(198,170,120,.5)}
+
+.app{max-width:560px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:10px 130px;display:flex;flex-direction:column;gap:16px}
+.eyebrow{font-family:var(--label);font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.chip{font-size:12px;font-weight:600;padding:5px 10px;border-radius:999px;border:1px solid var(--line);color:var(--mist);white-space:nowrap}
+
+.tabs{display:flex;flex-wrap:wrap;gap:8px;padding:2px 0}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;border:1px solid var(--midnight);background:var(--midnight);color:var(--pearl)!important;border-radius:999px;padding:10px 16px;font-size:17px;font-weight:600;color:var(--mist);cursor:pointer;display:flex;gap:6px;align-items:center}
+.tab[aria-current="page"]{background:var(--champ);color:var(--midnight)!important;border-color:var(--champ)}
+.tab:hover{border-color:var(--champ)}
+.tab .live{width:7px;height:7px;border-radius:50%;background:var(--cran);box-shadow:0 0 0 3px rgba(201,65,79,.25)}
+
+main{display:flex;flex-direction:column;gap:14px}
+.card{background:var(--pine);border:1px solid var(--line);border-radius:16px;box-shadow:0 6px 22px rgba(13,23,48,.06);padding:18px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.card h2{font-size:2.05rem;line-height:1.1}
+.card h3{font-size:1.35rem}
+.muted{color:var(--mist);font-size:16px}
+.note{border:1px dashed var(--line);border-radius:12px;padding:12px 14px;color:var(--mist);font-size:14px}
+.note.warn{border-color:var(--cran);color:var(--snow)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.spacer{flex:1}
+
+.btn{border:0;border-radius:12px;padding:14px 18px;font-size:17px;font-weight:700;background:var(--gold);color:var(--night);cursor:pointer;text-align:center}
+.btn:hover{background:var(--gold-soft)}
+.btn.ghost{background:transparent;color:var(--snow);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--gold)}
+.btn.red{background:var(--cran);color:var(--pearl)}
+.btn.sm{padding:11px 15px;font-size:16px;border-radius:11px}
+.btn.wide{width:100%}
+.btn:disabled{opacity:.45;cursor:default}
+
+label.f{display:flex;flex-direction:column;gap:8px;font-size:17px;font-weight:600}
+input[type=text],textarea{width:100%;background:var(--night);border:1px solid transparent;border-radius:10px;padding:13px 14px;font-size:18px;border-color:var(--line)}
+textarea{resize:vertical;min-height:64px}
+input::placeholder,textarea::placeholder{color:#9a9aa6}
+label.f{font-family:var(--body)}
+
+.bb{--h:var(--cran);flex:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:15px;color:#fff;position:relative;
+  background:radial-gradient(circle at 34% 28%,rgba(255,255,255,.6),transparent 38%),var(--h);text-shadow:0 1px 2px rgba(0,0,0,.35)}
+.bb::before{content:"";position:absolute;top:-5px;left:50%;width:10px;height:6px;transform:translateX(-50%);background:var(--champ);border-radius:2px 2px 1px 1px}
+.bb.lg{width:76px;height:76px;font-size:30px}
+.bb.lg::before{width:18px;height:10px;top:-9px}
+.players{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:14px 8px}
+.pl{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:13px;text-align:center;position:relative;min-width:0}
+.pl span{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pl .x{position:absolute;top:-6px;right:8px;width:22px;height:22px;border-radius:50%;border:1px solid var(--line);background:var(--night);color:var(--mist);font-size:13px;line-height:1;cursor:pointer}
+.hues{display:flex;gap:10px;flex-wrap:wrap;padding-top:6px}
+.hue{width:34px;height:34px;border-radius:50%;border:2px solid transparent;cursor:pointer;background:radial-gradient(circle at 34% 28%,rgba(255,255,255,.6),transparent 38%),var(--h)}
+.hue[aria-pressed="true"]{border-color:var(--snow);box-shadow:0 0 0 2px var(--night) inset}
+
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.choice{display:flex;align-items:center;gap:10px;padding:12px;font-size:17px;border-radius:12px;border:1px solid var(--line);background:var(--night);cursor:pointer;text-align:left;min-width:0;font-weight:600}
+.choice span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.choice[aria-pressed="true"]{border-color:var(--gold);background:var(--pine-2);box-shadow:0 0 0 1px var(--gold) inset}
+.choice.done::after{content:"✓";margin-left:auto;color:var(--gold)}
+
+.games{display:grid;gap:10px}
+.game{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:14px;border-radius:14px;border:1px solid var(--line);background:var(--pine);cursor:pointer;text-align:left}
+.game:hover{border-color:var(--gold)}
+.game .n{font-family:var(--display);font-size:1.4rem;font-weight:500;line-height:1.05}
+.game .num{font-variant-numeric:lining-nums;font-family:var(--display);font-size:1.8rem;color:var(--champ);width:28px;text-align:center}
+.game .go{color:var(--champ);font-family:var(--display);font-size:1.6rem}
+
+.progress{display:flex;align-items:center;gap:10px;font-size:16px;color:var(--mist)}
+.progress .track{flex:1;height:5px;border-radius:9px;background:var(--track);overflow:hidden}
+.progress .fill{height:100%;background:var(--gold);border-radius:9px;transition:width .4s}
+
+.bars{display:flex;flex-direction:column;gap:10px}
+.bar{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;align-items:center}
+.bar .bb{width:30px;height:30px;font-size:12px}
+.bar .bb::before{width:8px;height:5px;top:-4px}
+.bar .t{display:flex;flex-direction:column;gap:4px;min-width:0}
+.bar .t b{font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar .tr{height:6px;border-radius:9px;background:var(--track);overflow:hidden}
+.bar .tr i{display:block;height:100%;background:var(--champ);border-radius:9px}
+.bar .c{font-family:var(--display);font-size:1.3rem;font-variant-numeric:lining-nums tabular-nums;font-weight:600;color:var(--gold)}
+.winner{display:flex;flex-direction:column;align-items:center;gap:10px;padding:10px 0 4px;text-align:center}
+.winner .nm{font-family:var(--display);font-size:2.4rem;font-weight:500;color:var(--gold)}
+.trophy{font-family:var(--label);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--mist);font-weight:500}
+.awardlist{display:flex;flex-direction:column;gap:12px;padding:0;margin:0;list-style:none}
+.awardlist li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.awardlist li:last-child{border-bottom:0;padding-bottom:0}
+.awardlist .q{font-size:13px;color:var(--mist)}
+.awardlist .w{font-family:var(--display);font-size:19px}
+
+.board{display:flex;flex-direction:column;gap:8px}
+.slot{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;background:var(--night);border:1px solid var(--line);text-align:left;min-height:52px}
+.slot .r{font-family:var(--display);font-size:1.5rem;color:var(--champ);text-align:center}
+.slot .a{font-weight:700;font-size:17px;min-width:0;overflow-wrap:anywhere}
+.slot .c{font-variant-numeric:tabular-nums;font-weight:700;background:var(--gold);color:var(--pearl);border-radius:8px;padding:2px 9px}
+.slot.hid .a{color:var(--champ);letter-spacing:.3em}
+.slot.hid{background:repeating-linear-gradient(135deg,var(--night) 0 10px,#EFE8DA 10px 20px)}
+button.slot{cursor:pointer;width:100%}
+.slot.open{border-color:var(--gold);animation:flip .45s ease-out}
+@keyframes flip{from{transform:rotateX(70deg);opacity:.2}to{transform:none;opacity:1}}
+
+.wheelwrap{position:relative;width:min(300px,100%);aspect-ratio:1;margin:6px auto 0;max-width:100%}
+#wheel{width:100%;height:100%;display:block;border-radius:50%;box-shadow:0 0 0 5px var(--champ),0 0 0 8px var(--pine),0 0 0 9px var(--line),0 10px 30px rgba(13,23,48,.15)}
+.pointer{position:absolute;top:-10px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:13px solid transparent;border-right:13px solid transparent;border-top:24px solid var(--cran);filter:drop-shadow(0 2px 2px rgba(0,0,0,.5));z-index:2}
+.hub{position:absolute;inset:0;margin:auto;width:54px;height:54px;border-radius:50%;background:var(--pine);border:2px solid var(--champ);display:grid;place-items:center;font-family:var(--script);color:var(--gold);font-size:17px;pointer-events:none}
+.result{text-align:center;padding:6px 0}
+.result .big{font-family:var(--display);font-size:1.8rem;color:var(--gold);line-height:1.2}
+.toastpick{display:flex;gap:12px;align-items:center;padding:12px 14px;border-radius:12px;background:var(--cran)}
+.toastpick{color:var(--pearl)}
+.toastpick b{font-family:var(--display);font-weight:500;font-size:1.6rem}
+
+.bingo{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.sq{min-height:112px;border-radius:10px;border:1px solid var(--line);background:var(--night);font-size:15px;font-weight:600;line-height:1.22;padding:8px 6px;display:grid;place-items:center;text-align:center;cursor:pointer;overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
+.sq.long{font-size:13px}
+.bingo{align-items:stretch}
+.sq[aria-pressed="true"]{background:var(--cran);border-color:var(--cran);color:#fff;font-weight:600;position:relative}
+.sq.line{box-shadow:0 0 0 2px var(--champ) inset}
+@media (min-width:460px){.sq{font-size:17px}.sq.long{font-size:15px}}
+.bingobanner{text-align:center;font-family:var(--script);font-size:2.8rem;color:var(--cran);line-height:1.1}
+
+.seal{display:flex;gap:14px;align-items:center}
+.seal .wax{flex:none;width:58px;height:58px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#9a4a57,var(--cran) 60%,#4a1d26);display:grid;place-items:center;font-family:var(--display);font-size:22px;color:#fbe0e3;box-shadow:0 2px 0 #3a141c}
+.preds{display:flex;flex-direction:column;gap:16px}
+.preds h3{font-size:1.25rem;color:var(--gold)}
+.preds ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-direction:column;gap:8px}
+.preds li{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start}
+.preds li .bb{width:26px;height:26px;font-size:11px}
+.preds li .bb::before{width:7px;height:4px;top:-3px}
+
+.qrbox{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.qr{background:var(--snow);padding:10px;border-radius:12px;line-height:0}
+.qr img,.qr canvas{display:block;width:160px;height:160px}
+.linkrow{display:flex;gap:8px}
+.linkrow input{flex:1;min-width:0}
+
+.hostbar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(251,248,241,.95);box-shadow:0 -6px 20px rgba(13,23,48,.08);backdrop-filter:blur(8px);border-top:1px solid var(--line);
+  padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.hostbar .in{max-width:560px;margin:0 auto;display:flex;gap:8px;align-items:center}
+.hostbar .lbl{font-size:12px;color:var(--mist);line-height:1.3;min-width:0;flex:1}
+.hostbar .lbl b{display:block;color:var(--snow);font-size:14px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(86px + env(safe-area-inset-bottom,0px));z-index:30;background:var(--midnight);color:var(--pearl);padding:10px 16px;border-radius:12px;font-weight:600;font-size:14px;max-width:calc(100% - 32px);box-shadow:0 6px 24px rgba(0,0,0,.4)}
+
+.join{padding:26px 20px;gap:16px}
+.joinbb{display:flex;justify-content:center;padding-top:10px}
+.bigin{text-align:center;font-size:22px!important;font-weight:700;padding:14px!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.join .btn{font-size:18px;padding:15px}
+.spotgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.spotbtn{display:flex;align-items:center;justify-content:center;gap:6px;min-height:52px;padding:8px;border-radius:12px;border:1px solid var(--line);background:var(--night);font-weight:600;font-size:14px;line-height:1.2;text-align:center;cursor:pointer}
+.spotbtn[aria-pressed="true"]{background:var(--gold);color:var(--night);border-color:var(--gold)}
+.spotbtn .live,.tab .live{flex:none}
+.spotbtn .live{width:7px;height:7px;border-radius:50%;background:var(--cran)}
+.voters{display:flex;flex-wrap:wrap;gap:6px}
+.vt{font-size:13px;padding:4px 10px;border-radius:999px;border:1px dashed var(--line);color:var(--mist)}
+.vt.ok{border:1px solid var(--gold);color:var(--snow)}
+.tablewrap{overflow-x:auto;margin-inline:-4px}
+.stat{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}
+.stat th{font-family:var(--label);font-weight:500!important;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist);font-weight:600;text-align:center;padding:6px 4px;white-space:nowrap}
+.stat th:first-child,.stat td:first-child{text-align:left}
+.stat td{padding:8px 4px;border-top:1px solid var(--line);text-align:center;white-space:nowrap}
+.stat .bb{width:26px;height:26px;font-size:11px}
+.stat .bb::before{width:7px;height:4px;top:-3px}
+.stat .ok{color:var(--gold);font-weight:700}.stat .no{color:var(--champ)}
+.chip.x-swap{background:var(--gold);color:var(--night);border-color:var(--gold);cursor:pointer;font-family:var(--body)}
+.mebar{gap:10px;padding:10px 14px;border:1px solid var(--line);border-radius:14px;line-height:1.3}
+.mebar.card{padding:14px}
+.seg{display:flex;padding:3px;border-radius:999px;border:1px solid rgba(198,170,120,.5);background:rgba(245,240,231,.1);flex:none}
+.seg button{border:0;background:transparent;border-radius:999px;padding:7px 14px;font-family:var(--label);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;color:var(--champ);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--champ);color:var(--midnight)}
+.players{grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:12px 6px}
+.players .bb.lg{width:44px;height:44px;font-size:17px}
+.players .bb.lg::before{width:11px;height:6px;top:-5px}
+.players .pl{font-size:12px;gap:5px}
+.choices.compact{gap:6px}
+.choices.compact .choice{padding:11px 10px;gap:9px;font-size:17px}
+.choices.compact .bb{width:32px;height:32px;font-size:14px}
+.choices.compact .bb::before{width:8px;height:5px;top:-4px}
+.awctl{display:flex;flex-direction:column}
+.awrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.awq{font-size:14px;line-height:1.35}
+.presctl{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;position:sticky;bottom:calc(10px + env(safe-area-inset-bottom,0px));padding:10px;border-radius:16px;background:rgba(251,248,241,.94);box-shadow:0 6px 24px rgba(13,23,48,.12);z-index:5}
+.presctl .btn{font-size:1rem;padding:13px 18px}
+.voters.big{gap:8px}
+.voters.big .vt{display:flex;align-items:center;gap:8px;padding:5px 12px 5px 6px;font-size:15px}
+.voters.big .vt .bb{width:26px;height:26px;font-size:11px;opacity:.45}
+.voters.big .vt.ok .bb{opacity:1}
+.voters.big .bb::before{width:7px;height:4px;top:-3px}
+.pop{animation:pop .55s cubic-bezier(.2,.9,.3,1.2)}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+.okmsg{background:var(--pine-2);color:var(--gold);font-weight:700;border-radius:10px;padding:10px 14px;font-size:16px}
+.leader{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.leader li{display:grid;grid-template-columns:28px auto minmax(0,1fr) auto;gap:10px;align-items:center;padding:8px 10px;border-radius:12px}
+.leader li.top{background:var(--pine-2)}
+.leader .rk{font-family:var(--display);font-size:1.4rem;font-weight:600;color:var(--champ);text-align:right;font-variant-numeric:lining-nums}
+.leader li.top .rk{color:var(--gold)}
+.leader .bb{width:30px;height:30px;font-size:12px}
+.leader .bb::before{width:8px;height:5px;top:-4px}
+.leader .t{display:flex;flex-direction:column;gap:4px;min-width:0}
+.leader .t b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.leader .tr{height:6px;border-radius:9px;background:var(--track);overflow:hidden}
+.leader .tr i{display:block;height:100%;background:var(--champ);border-radius:9px}
+.leader .c{font-weight:700;color:var(--gold);font-size:15px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.stage .leader li{padding:12px 16px}
+.stage .leader .rk{font-size:2rem;width:auto}
+.stage .leader .bb{width:46px;height:46px;font-size:18px}
+.stage .leader .t b{font-size:24px}
+.stage .leader .c{font-size:22px}
+.stage .leader li{grid-template-columns:44px auto minmax(0,1fr) auto}
+.game{background:var(--gc);color:var(--gf);border-color:var(--gc);box-shadow:0 6px 18px rgba(13,23,48,.12)}
+.game:hover{border-color:var(--gc);filter:brightness(1.06)}
+.game .muted{color:inherit;opacity:.88}
+.game .num,.game .go{color:inherit;opacity:.75}
+.tab.g{background:var(--tc);border-color:var(--tc);color:var(--tf)!important}
+.tab.g[aria-current="page"]{background:var(--tc);border-color:var(--tc);color:var(--tf)!important;box-shadow:0 0 0 3px var(--night),0 0 0 5px var(--tc);font-weight:800}
+.gamehead{height:8px;border-radius:999px;background:var(--gc)}
+.wl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.wl li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;padding:12px 0;border-top:1px solid var(--line)}
+.wl li:first-child{border-top:0}
+.wl .wt{display:flex;flex-direction:column;gap:2px;min-width:0;overflow-wrap:anywhere}
+.wl .wt a{color:#6B3F69;font-weight:600;font-size:15px}
+.wl li.taken .wt b{color:var(--mist);text-decoration:line-through}
+.wadd{display:flex;flex-direction:column;gap:12px;padding-top:6px}
+.wpeople{display:flex;flex-direction:column;gap:18px}
+.wp{display:flex;flex-direction:column;gap:6px;padding-top:4px}
+.wn{font-family:var(--display);font-size:1.4rem;font-weight:500}
+.game.lockd{filter:saturate(.45);opacity:.8}
+.tab.lockd{opacity:.6}
+.lockcard{align-items:center;text-align:center;padding-block:32px}
+.lockico{font-size:40px;line-height:1}
+.opengrid{display:flex;flex-direction:column}
+.openrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:12px 0;border-top:1px solid var(--line)}
+.openrow:first-child{border-top:0}
+.openrow .dot{width:14px;height:14px;border-radius:50%;background:var(--gc);flex:none}
+.openrow .st{font-family:var(--label);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mist)}
+.openrow .st.on{color:#2A6B4F;font-weight:600}
+.assign{display:flex;flex-direction:column}
+.arow{display:grid;grid-template-columns:auto minmax(0,1fr) auto minmax(0,1.2fr);gap:10px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.arow:first-child{border-top:0}
+.arow .an{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.arow .arr{color:var(--champ);font-size:20px}
+.arow select{width:100%;min-width:0;font:inherit;font-size:16px;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--night);color:var(--snow)}
+.giftcard{align-items:stretch}
+.glist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.glist li{display:grid;grid-template-columns:auto minmax(0,1fr) auto auto minmax(0,1fr);gap:8px;align-items:center;padding:10px 8px;border-top:1px solid var(--line);border-radius:10px}
+.glist li:first-child{border-top:0}
+.glist li.me{background:var(--pine-2)}
+.glist b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:16px}
+.glist .bb{width:28px;height:28px;font-size:12px}
+.glist .bb::before{width:8px;height:5px;top:-4px}
+.glist .arr{color:var(--champ);font-size:18px}
+.gpick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.gbtn{min-height:54px;border-radius:12px;border:1px solid var(--line);background:var(--night);font-size:18px;font-weight:600;cursor:pointer;padding:8px}
+.gbtn[aria-pressed="true"]{background:var(--gold);color:var(--pearl);border-color:var(--gold)}
+.linkbtn{background:none;border:0;color:var(--gold);text-decoration:underline;font-size:16px;cursor:pointer;padding:4px;align-self:center}
+.gedit{list-style:none;margin:0;padding:0}
+.gedit li{display:grid;grid-template-columns:minmax(0,1fr) auto auto auto auto auto;gap:10px;align-items:center;padding:8px 0;border-top:1px solid var(--line)}
+.gedit li:first-child{border-top:0}
+.gedit b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gst{font-size:13px;color:var(--mist)}
+.gcode{font-family:ui-monospace,Menlo,monospace;font-size:15px;font-weight:700;color:var(--gold);background:var(--pine-2);padding:3px 8px;border-radius:8px}
+.gchk{display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer}
+.gchk input{width:20px;height:20px;accent-color:var(--gold)}
+.arow{grid-template-columns:minmax(0,1fr) auto minmax(0,1.3fr)!important}
+@media (max-width:520px){.gedit li{grid-template-columns:minmax(0,1fr) auto auto;row-gap:6px}.gst{display:none}.gedit li .gchk{grid-column:1}}
+.infocard{border-color:var(--champ);box-shadow:0 0 0 1px var(--champ) inset,0 6px 22px rgba(13,23,48,.06)}
+.infocard .ib{display:flex;flex-direction:column;gap:4px;padding-top:10px;border-top:1px solid var(--line)}
+.infocard .ib:first-of-type{border-top:0;padding-top:0}
+.pre{white-space:pre-line;overflow-wrap:anywhere}
+.bigsel{width:100%;font:inherit;font-size:18px;padding:13px 14px;border-radius:10px;border:1px solid var(--line);background:var(--night);color:var(--snow)}
+/* Big screen */
+body.screen .app{max-width:1180px;padding-bottom:40px}
+body.screen #modechip{display:none}
+body.screen h1{font-size:56px}
+.stage{display:flex;flex-direction:column;gap:28px;padding-top:12px}
+.stage .eyebrow{font-size:16px}
+.stage h2{font-size:clamp(34px,5vw,64px);line-height:1.08}
+.stage .card{padding:28px}
+.stage .bar .bb{width:48px;height:48px;font-size:18px}
+.stage .bar .t b{font-size:22px}
+.stage .bar .tr{height:14px}
+.stage .bar .c{font-size:24px}
+.stage .winner .nm{font-size:clamp(40px,5vw,72px)}
+.stage .bb.lg{width:120px;height:120px;font-size:46px}
+.stage .slot{min-height:76px;padding:16px 22px}
+.stage .slot .a{font-size:28px}
+.stage .slot .r,.stage .slot .c{font-size:26px}
+.stage .players{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+.stage .pl{font-size:18px}
+.stage .qr img,.stage .qr canvas{width:260px;height:260px}
+.stage .awardlist .w{font-size:28px}
+.stage .awardlist .q{font-size:17px}
+.stage .bigline{font-family:var(--display);font-size:clamp(30px,4vw,52px);color:var(--gold)}
+.awardlist .w{font-family:var(--display);font-weight:500}
+.stage .preds h3{font-size:24px}
+.stage .preds li{font-size:20px}
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px}
+.exitscreen{position:fixed;right:max(12px,env(safe-area-inset-right,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));font-size:12px;opacity:.5}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ===== Klaas: õhuline, läbipaistev kiht ===== */
+:root{--glass:rgba(255,255,255,.58);--glass-strong:rgba(255,255,255,.72);--glass-line:rgba(255,255,255,.75);--glass-edge:rgba(20,33,61,.08);--blur:saturate(1.3) blur(16px)}
+html,body{background-color:var(--night)}
+body{background-image:linear-gradient(180deg,#0d1730 0px,#1a2a52 230px,#5d6a8c 400px,#c9c6c3 560px,var(--night) 760px);background-repeat:no-repeat;background-size:100% 100%;min-height:100vh}
+.hero{background:transparent;margin-top:0;padding-bottom:18px;border-radius:0}
+.hero .snow{opacity:.65}
+.app{gap:20px}
+main{gap:18px}
+.card,.game,.mebar,.slot,.toastpick{-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}
+.card{background:var(--glass);border:1px solid var(--glass-line);border-radius:24px;padding:22px;box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 10px 30px rgba(13,23,48,.08)}
+.infocard{background:var(--glass-strong);border-color:rgba(198,170,120,.65);box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 10px 30px rgba(13,23,48,.08)}
+.mebar{background:var(--glass);border:1px solid var(--glass-line);border-radius:20px}
+.btn{border-radius:999px;padding:14px 22px;background:rgba(25,60,50,.88);color:var(--pearl);border:1px solid rgba(255,255,255,.18);box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 6px 16px rgba(25,60,50,.18);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);transition:transform .15s,background .15s}
+.btn:hover{background:rgba(25,60,50,.96)}
+.btn:active{transform:scale(.98)}
+.btn.sm{border-radius:999px;padding:10px 16px}
+.btn.ghost{background:rgba(255,255,255,.45);color:var(--snow);border:1px solid var(--glass-line);box-shadow:0 1px 0 rgba(255,255,255,.6) inset}
+.btn.ghost:hover{background:rgba(255,255,255,.65);border-color:var(--glass-line)}
+.btn.red{background:rgba(105,44,56,.88)}
+.btn:disabled{opacity:.4}
+.tabs{gap:8px}
+.tab{background:rgba(13,23,48,.55)!important;border:1px solid rgba(255,255,255,.22)!important;-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}
+.tab.g{background:color-mix(in srgb,var(--tc) 72%,transparent)!important;border-color:rgba(255,255,255,.3)!important}
+.tab[aria-current="page"]{background:rgba(255,255,255,.82)!important;color:var(--midnight)!important;border-color:rgba(255,255,255,.9)!important;box-shadow:0 4px 14px rgba(13,23,48,.15)}
+.tab.g[aria-current="page"]{background:color-mix(in srgb,var(--tc) 92%,white)!important;color:var(--tf)!important;box-shadow:0 0 0 2px rgba(255,255,255,.85),0 6px 16px rgba(13,23,48,.18)}
+.game{background:color-mix(in srgb,var(--gc) 80%,transparent);border:1px solid rgba(255,255,255,.35);border-radius:22px;padding:18px;box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 10px 26px rgba(13,23,48,.12)}
+.game:hover{border-color:rgba(255,255,255,.6);filter:none}
+.choice,.gbtn,.spotbtn{background:rgba(255,255,255,.5);border:1px solid var(--glass-line);border-radius:16px;box-shadow:0 1px 0 rgba(255,255,255,.6) inset}
+.choice[aria-pressed="true"]{background:rgba(220,229,221,.85);border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
+.gbtn[aria-pressed="true"]{background:rgba(25,60,50,.9);color:var(--pearl);border-color:transparent}
+.sq{background:rgba(255,255,255,.55);border:1px solid var(--glass-line);border-radius:16px}
+.sq[aria-pressed="true"]{background:rgba(105,44,56,.88);border-color:transparent}
+input[type=text],textarea,.bigsel,.arow select{background:rgba(255,255,255,.6)!important;border:1px solid var(--glass-line)!important;border-radius:14px!important}
+input[type=text]:focus,textarea:focus{background:rgba(255,255,255,.85)!important}
+.slot{background:rgba(255,255,255,.5);border:1px solid var(--glass-line);border-radius:16px}
+.slot.hid{background:repeating-linear-gradient(135deg,rgba(255,255,255,.45) 0 10px,rgba(239,232,218,.55) 10px 20px)}
+.okmsg{background:rgba(220,229,221,.75);border-radius:14px}
+.note{border-radius:14px;background:rgba(255,255,255,.35)}
+.leader li.top{background:rgba(220,229,221,.75)}
+.hostbar{background:rgba(251,248,241,.7);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);border-top:1px solid var(--glass-line)}
+.presctl{background:rgba(251,248,241,.7);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);border:1px solid var(--glass-line);border-radius:999px}
+.gcode{background:rgba(220,229,221,.8)}
+.hue{box-shadow:0 2px 6px rgba(13,23,48,.15)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.card{background:rgba(251,248,241,.94)}}
+</style>
+
+</head>
+<body>
+<div class="app">
+  <header class="hero">
+    <span class="snow" aria-hidden="true"></span>
+    <svg class="garland" id="garland" viewBox="0 0 400 50" preserveAspectRatio="none" aria-hidden="true"></svg>
+    <div class="kicker">Pere jõulud</div>
+    <h1>Jõulud 2026</h1>
+    <div class="script">info ja mängud</div>
+    <span id="modechip" class="chip">Laadin…</span>
+  </header>
+  <nav id="tabs" class="tabs" aria-label="Mängud"></nav>
+  <main id="main">
+    <section class="card"><h2>Tere tulemast pere jõululauda</h2><p class="muted">Mäng avaneb kohe. Siia ilmuvad mängijad, hääletused ja tulemused.</p></section>
+  </main>
+</div>
+<div id="hostbar" class="hostbar" hidden></div>
+<div id="toast" class="toast" role="status" hidden></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script>
+/* ====== FIREBASE SEADISTUS: kleebi siia oma Firebase'i konfiguratsioon ====== */
+window.FIREBASE_CONFIG = {
+  apiKey: "AIzaSyBeGe5RBYWQW4jbBXiVgdojo88Ama7-JFo",
+  authDomain: "joulud2026.firebaseapp.com",
+  projectId: "joulud2026",
+  storageBucket: "joulud2026.firebasestorage.app",
+  messagingSenderId: "141466669472",
+  appId: "1:141466669472:web:014b2f5323ecfa778a94c5"
+};
+/* ========================================================================== */
+(function(){
+  const cfg = window.FIREBASE_CONFIG;
+  if (!cfg || !cfg.apiKey) return;
+  if (!window.firebase) { window.__fbError = "Firebase ei laadinud. Kontrolli internetiühendust."; return; }
+  firebase.initializeApp(cfg);
+  const auth = firebase.auth(), fs = firebase.firestore();
+  try { fs.settings({ ignoreUndefinedProperties: true }); } catch (e) {}
+  let uid = null, key = null;   /* key = külalise id (nt g04), kui inimene on liitunud */
+  const ready = auth.signInAnonymously()
+    .then(c => { uid = c.user.uid; return fs.collection("taken").where("uid", "==", uid).limit(1).get(); })
+    .then(q => { key = q.empty ? "u_" + uid : q.docs[0].id; return true; })
+    .catch(e => { console.error("Firebase:", e); window.__fbError = (e && e.code) || "tundmatu viga"; return null; });
+  const snapDoc = s => ({ exists: s.exists, data: () => s.data() });
+  const db = {
+    fb: true,
+    doc: p => ({
+      set: d => fs.doc(p).set(d),
+      delete: () => fs.doc(p).delete(),
+      onSnapshot: (cb, err) => fs.doc(p).onSnapshot(s => cb(snapDoc(s)), e => { console.warn(p, e.code); if (e.code === "permission-denied") cb({ exists: false, data: () => undefined }); else if (err) err(e); })
+    }),
+    collection: c => ({
+      onSnapshot: (cb, err) => {
+        let un = fs.collection(c).onSnapshot(
+          q => cb({ docs: q.docs.map(d => ({ id: d.id, data: () => d.data() })) }),
+          e => {
+            if (e.code === "permission-denied" && key) {               /* tavamängija näeb ainult oma dokumenti */
+              un = fs.doc(c + "/" + key).onSnapshot(s => cb({ docs: s.exists ? [{ id: s.id, data: () => s.data() }] : [] }), () => cb({ docs: [] }));
+            } else if (err) err(e);
+          });
+        return () => un();
+      }
+    }),
+    join: (gid, code, pdata) => fs.collection("taken").where("uid", "==", uid).get().then(q => {
+      const b = fs.batch();
+      q.docs.forEach(d => { if (d.id !== gid) b.delete(d.ref); });          /* samas brauseris varem kasutatud nimed vabaks */
+      b.set(fs.doc("taken/" + gid), { uid, code });
+      b.set(fs.doc("players/" + gid), { ...pdata, guest: gid, active: true }, { merge: true });
+      return b.commit();
+    }),
+    leave: gid => { const b = fs.batch(); if (gid) { b.set(fs.doc("players/" + gid), { active: false }, { merge: true }); b.delete(fs.doc("taken/" + gid)); } return b.commit(); },
+    setup: (state, codesDoc) => fs.doc("gifts/_codes").set(codesDoc).then(() => fs.doc("game/state").set(state))
+  };
+  const user = { id: async () => { await ready; return key; }, isOwner: async () => false, can: async () => true, me: async () => ({}) };
+  window.claude = { use: async n => { const ok = await ready; if (!ok) return null; return n === "db" ? db : n === "user" ? user : null; } };
+})();
+
+</script>
+<script>
+/* ---------- content ---------- */
+const AWARDS=[
+ "Kes suudaks kõige kiiremini ära kulutada 100 000 eurot?",
+ "Kellest võiks kõige tõenäolisemalt saada Hollywoodi filmistaar?",
+ "Kelle riidekapis on kõige rohkem riideid?",
+ "Kes läheks kõige VÄHEM tõenäoliselt hommikul kell 6:00 jooksma?",
+ "Kes on kõige suurem tantsulõvi?",
+ "Kes jääks viimasena zombide rünnakus ellu?",
+ "Kes oskab kõige paremini luisata?",
+ "Oled sooritanud mõrva ja vajad kedagi appi laipa peitma. Kellele sa helistad?",
+ "Kelle valiksid endale üksikule saarele kaasa?",
+ "Kes jääb kõige tõenäolisemalt alati hiljaks?",
+ "Kes teeb lauamängudes kõige tõenäolisemalt sohki?",
+ "Kes eksiks reisil kõige tõenäolisemalt ära?"
+];
+const FQ=()=>{const l=S.state.feudList;return Array.isArray(l)&&l.length?l:FEUD0};
+const FEUD0=[
+ "Mis on kõige tüütum asi meie pere jõuludel?",
+ "Kes jääb esimesena magama?",
+ "Mis toit peab jõululaual kindlasti olema?",
+ "Mida keegi meie peres igal jõulul kindlasti ütleb?",
+ "Mis on kõige hullem jõulukingitus?"
+];
+const WHEEL=[
+ {s:"Auhind",t:"Väike auhind! Vali laualt üks maius või kommikarbist üks komm."},
+ {s:"Toost",t:"Sina teed järgmise toosti."},
+ {s:"Laul",t:"Laula üks salm oma lemmik jõululaulust."},
+ {s:"Mälestus",t:"Jaga oma kõige naljakamat jõulumälestust."},
+ {s:"Kompliment",t:"Tee igale laua taga istujale üks kompliment."},
+ {s:"Uuesti",t:"Keeruta uuesti!"},
+ {s:"Nali",t:"Räägi üks nali. Kui keegi naerab, saad auhinna."},
+ {s:"Kohavahetus",t:"Vaheta kohta kellega iganes soovid."},
+ {s:"Auhind",t:"Suur auhind! Järgmise kingi saad avada esimesena."},
+ {s:"Vali",t:"Vali, kes keerutab järgmisena."}
+];
+const BINGO=[
+ "Keegi räägib ilmast","Keegi pakub kolmandat korda süüa","Keegi küsib, millal lapsed tulevad","„Ma ei jaksa enam“ ja võtab veel",
+ "Keegi räägib tööst","Keegi teeb toidust pilti","Keegi vaatab laua all telefoni","„Vanasti olid jõulud teistsugused“",
+ "Keegi läheb kööki ja tuleb tühjade kätega tagasi","„Järgmine aasta teeme teisiti“","Keegi kiidab praadi","Keegi ajab kellegi nimed segi",
+ "Kuusk on kellegi meelest viltu","Keegi laulab niisama","Lemmikloom saab laualt toitu","Keegi kurdab hindade üle",
+ "Keegi küsib, millal pulmad on","Keegi tukub diivanil","Keegi kustutab kogemata küünla","Keegi pakub kohvi",
+ "Telefon heliseb söögi ajal","Tehakse grupipilt","Keegi räägib autodest","Keegi läigatab midagi lauale",
+ "Keegi küsib retsepti","Keegi ütleb „see oli minu lemmik“"
+];
+const CAPSULE=[
+ "Kes meist teeb järgmisel aastal suurima elumuutuse?",
+ "Kuhu pere järgmisel aastal reisib?",
+ "Mis kellelgi järgmisel aastal õnnestub?",
+ "Minu enda soov järgmiseks aastaks"
+];
+const GAMES=[
+ {k:"gifts",c:"#6B3F69",f:"#F5F0E7",col:"lilla",tab:"Loosipakid",n:"Loosipakid",d:"Vaata, kellele sina loosipaki teed."},
+ {k:"bingo",c:"#2A6B4F",f:"#F5F0E7",col:"roheline",tab:"BINGO",n:"BINGO",d:"Igaühel oma bingolaud. Mäng kestab terve õhtu ja esimene bingo võidab."},
+ {k:"awards",c:"#B8924F",f:"#14213D",col:"kuldne",tab:"Auhinnad",n:"Auhinnad",d:"Hääleta, kes pälvib millise tiitli."},
+ {k:"feud",c:"#8E2F3F",f:"#F5F0E7",col:"punane",tab:"Rooside sõda",n:"Rooside sõda",d:"Vasta küsimustele, siis saame teada populaarsemad vastused."},
+ {k:"capsule",c:"#2B4C8C",f:"#F5F0E7",col:"sinine",tab:"Ajakapsel",n:"Ajakapsel",d:"Ennustused, mis avatakse 2027. aasta jõuludel."}
+];
+const HUES=["#c9414f","#d89a2b","#4f9e75","#5f86d1","#cf6fa6","#d9773f","#8f72d8","#3fa4ab","#9aa23a","#b5564a"];
+const LOCKABLE=["gifts","bingo","awards","feud","capsule"];
+const DEF={round:"home",opened:{},rev:[],pa:0,ps:0,fq:0,idx:0,phase:"vote",shown:[],link:"",seed:1,toast:null,capOpen:false};
+const PAGE_URL="https://claude.ai/artifact/4h9ZPbXmTfwmFLYmVYH4Lr";
+const isOpen=k=>!LOCKABLE.includes(k)||!!(S.state.opened||{})[k];
+const locked=k=>!isOpen(k)&&!ui.role&&mode==="shared";
+const noGiftMe=()=>{if(ui.role)return false;const gg=guests().find(x=>x.id===guestOf(me));return !!(gg&&gg.noGift)};
+const visGames=()=>GAMES.filter(g=>!(g.k==="gifts"&&noGiftMe()));
+const COLS=["players","votes","feud","bingo","spins","capsule","gifts"];
+const GUESTS0=[];
+const guests=()=>Array.isArray(S.state.guests)?S.state.guests:GUESTS0;
+const gname=g=>(guests().find(x=>x.id===g)||{}).name||"";
+const norm2=x=>String(x||"").toLowerCase().replace(/[-\s]+/g," ").trim();
+const guestOf=p=>{const pl=S.players[p];if(!pl)return null;if(pl.guest&&guests().some(x=>x.id===pl.guest))return pl.guest;const m=guests().find(x=>norm2(x.name)===norm2(pl.name));return m?m.id:null};
+const plan=()=>(S.gifts&&S.gifts._plan&&S.gifts._plan.map)||{};
+const takenGuests=()=>new Set(pids().filter(p=>S.players[p].active!==false).map(guestOf).filter(Boolean));
+const ccode=x=>String(x||"").toLowerCase().replace(/[\s.\-]/g,"");
+function chash(gid,code){let h=2166136261;const t=gid+":"+ccode(code);for(let i=0;i<t.length;i++){h^=t.charCodeAt(i);h=Math.imul(h,16777619)>>>0}return h.toString(16)}
+const codes=()=>(S.gifts&&S.gifts._codes&&S.gifts._codes.map)||{};
+const CWORDS=["kuusk","lumi","kell","kuul","tuled","pakk","saan","sokk","hirv","kommid","kook","tasku","sall","mesi","vahvel","inglike"];
+function newCode(){return CWORDS[Math.floor(Math.random()*CWORDS.length)]+(10+Math.floor(Math.random()*90))}
+function setGuestCode(gid,code){const c={...codes(),[gid]:ccode(code)};put("gifts","_codes",{...(S.gifts._codes||{}),map:c});return chash(gid,code)}
+function giftTarget(p){const g=guestOf(p),pl=plan();if(g&&pl[g])return gname(pl[g]);const d=S.gifts[p];return d&&d.toName&&g&&d.forGuest===g?d.toName:""}
+
+/* ---------- helpers ---------- */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const lsGet=k=>{try{return localStorage.getItem(k)}catch(e){return null}};
+const lsSet=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
+const hash=s=>{let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0};
+const cap=s=>s?s.charAt(0).toUpperCase()+s.slice(1):s;
+const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+let S=blank(), mode=null, db=null, user=null, me=null, isHost=false, canWrite=true, dbAvail=false, unsubs=[];
+let ui={view:"home",turn:null,drafts:{},hue:null,rot:0,spinning:false,pending:false,result:null,confirm:null,capView:false,lastRound:null,lastKey:null,screen:location.hash==="#ekraan"};
+
+function blank(){return{state:{...DEF},players:{},votes:{},feud:{},bingo:{},spins:{},capsule:{},gifts:{},secret:{}}}
+const pids=()=>Object.keys(S.players).filter(k=>!(db&&db.fb)||S.players[k].guest===k).sort((a,b)=>(S.players[a].t||0)-(S.players[b].t||0));
+const nm=p=>S.players[p]?.name||"Keegi";
+const hueOf=p=>HUES[(S.players[p]?.hue??0)%HUES.length];
+const bb=(p,cls="")=>`<span class="bb ${cls}" style="--h:${hueOf(p)}" aria-hidden="true">${esc((nm(p)[0]||"?").toUpperCase())}</span>`;
+const actor=()=>mode==="local"?ui.turn:me;
+let tt;function toast(m){const t=$("#toast");t.textContent=m;t.hidden=false;clearTimeout(tt);tt=setTimeout(()=>t.hidden=true,2600)}
+
+/* ---------- storage layer ---------- */
+const chains={};
+function write(path,data){
+  chains[path]=(chains[path]||Promise.resolve()).then(()=>data===null?db.doc(path).delete():db.doc(path).set(data)).catch(err=>{
+    if(err&&err.code==="invalid_argument"){canWrite=false;render();toast("Sul pole selles mängus muutmisõigust.")}
+    else if(err&&err.code==="quota_exceeded")toast("Mängu andmeruum on täis.");
+    else toast("Salvestamine ei õnnestunud. Proovi uuesti.");
+  });return chains[path];
+}
+function saveLocal(){lsSet("cc_local",JSON.stringify(S))}
+function put(col,id,data){
+  if(data===null)delete S[col][id];else S[col][id]=data;
+  if(mode==="local"){saveLocal();render();return}
+  render();write(col+"/"+id,data);
+}
+function setState(patch){
+  S.state={...S.state,...patch};
+  if(mode==="local"){saveLocal();render();return}
+  render();write("game/state",S.state);
+}
+function onErr(e){if(e&&e.code!=="revoked")toast("Ühendus katkes. Laadi leht uuesti.")}
+
+async function startShared(){
+  mode="shared";S=blank();
+  try{me=await user.id()}catch(e){me=null}
+  isHost=false;
+  let cw=null;try{cw=await user.can("data.write")}catch(e){}
+  canWrite=!!me&&cw!==false;
+  unsubs.push(db.doc("game/state").onSnapshot(s=>{ui.stLoaded=true;ui.stExists=s.exists;S.state=s.exists?{...DEF,...s.data()}:{...DEF};render()},onErr));
+  for(const c of COLS){unsubs.push(db.collection(c).onSnapshot(q=>{const m={};q.docs.forEach(d=>m[d.id]=d.data());S[c]=m;render()},onErr))}
+  render();
+}
+function startLocal(){
+  mode="local";isHost=true;canWrite=true;me=null;
+  let saved=null;try{saved=JSON.parse(lsGet("cc_local")||"null")}catch(e){}
+  S=saved&&saved.state?{...blank(),...saved,state:{...DEF,...saved.state}}:blank();
+  render();
+}
+function switchMode(to){unsubs.forEach(u=>{try{u()}catch(e){}});unsubs=[];lsSet("cc_mode",to);ui.turn=null;ui.view="home";ui.lastRound=null;to==="shared"?startShared():startLocal()}
+
+/* ---------- game logic ---------- */
+const cands=()=>guests().length?guests().map(g=>g.id):pids();
+const cpl=id=>S.players[id]?id:(pids().find(p=>guestOf(p)===id)||null);
+const cnm=id=>gname(id)||nm(id);
+const cbb=(id,cls="")=>{const p=cpl(id);if(p)return bb(p,cls);const gi=guests().findIndex(g=>g.id===id);return`<span class="bb ${cls}" style="--h:${HUES[(gi<0?0:gi)%HUES.length]}" aria-hidden="true">${esc((cnm(id)[0]||"?").toUpperCase())}</span>`};
+const voteKey=c=>{if(!c)return null;if(cands().includes(c))return c;const g=S.players[c]&&guestOf(c);return g&&cands().includes(g)?g:null};
+function tally(i){const t={};for(const p of pids()){const c=voteKey(S.votes[p]?.awards?.[i]);if(c)t[c]=(t[c]||0)+1}return Object.entries(t).map(([p,n])=>({p,n})).sort((a,b)=>b.n-a.n)}
+const votedAward=(p,i)=>S.votes[p]?.awards?.[i]!=null;
+const norm=s=>s.toLowerCase().replace(/[.,!?;:"'„“”()]/g,"").replace(/\s+/g," ").trim();
+function feudBoard(qi){
+  const g={};
+  for(const p of pids()){const raw=(S.feud[p]?.a||[])[qi];if(!raw||!raw.trim())continue;const k=norm(raw);if(!k)continue;
+    g[k]=g[k]||{n:0,forms:{}};g[k].n++;const f=raw.trim();g[k].forms[f]=(g[k].forms[f]||0)+1}
+  return Object.values(g).map(x=>({text:cap(Object.entries(x.forms).sort((a,b)=>b[1]-a[1])[0][0]),n:x.n})).sort((a,b)=>b.n-a.n||a.text.localeCompare(b.text,"et")).slice(0,6);
+}
+const feudDone=p=>(S.feud[p]?.a||[]).some(x=>x&&x.trim());
+const LINES=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+const bingoItems=()=>{const l=S.state.bingoList;return Array.isArray(l)&&l.length>=9?l:BINGO};
+const boardFor=p=>bingoItems().map((_,i)=>i).sort((a,b)=>hash(p+":"+S.state.seed+":"+a)-hash(p+":"+S.state.seed+":"+b)).slice(0,9);
+const bingoLines=m=>LINES.filter(l=>l.every(x=>m.includes(x)));
+function bingoWinner(){let w=null;for(const p of pids()){const at=S.bingo[p]?.at;if(at&&(!w||at<w.at))w={p,at}}return w}
+const capDone=p=>(S.capsule[p]?.a||[]).some(x=>x&&x.trim());
+
+const ITEMS={awards:()=>AWARDS.length+1,feud:()=>FQ().length};
+function advance(k){
+  const st=S.state;
+  if(k==="awards"){
+    if(st.idx<AWARDS.length&&st.phase==="vote")return setState({phase:"reveal"});
+    if(st.idx<AWARDS.length)return setState({idx:st.idx+1,phase:"vote"});
+    return;
+  }
+  if(k==="feud"){const q=st.fq||0;if(q<FQ().length-1)setState({fq:q+1,shown:[]})}
+}
+function back(k){
+  const st=S.state;
+  if(k==="awards"){
+    if(st.idx<AWARDS.length&&st.phase==="reveal")return setState({phase:"vote"});
+    if(st.idx>0)return setState({idx:st.idx-1,phase:"reveal"});
+    return;
+  }
+  if(k==="feud"){const q=st.fq||0;if(q>0)setState({fq:q-1,shown:[]})}
+}
+function spotlight(k){setState({round:k,idx:0,phase:"vote",shown:[]})}
+
+async function resetGame(){
+  ui.confirm=null;
+  const keep={guests:S.state.guests,bingoList:S.state.bingoList,feudList:S.state.feudList,info:S.state.info};
+  const st={...DEF,...keep,link:S.state.link,seed:Math.floor(Math.random()*1e6)+2};
+  const cols=["votes","bingo","spins","feud"];if(mode==="local"||(db&&db.fb))cols.push("capsule");
+  if(mode==="local"){S.state=st;for(const c of cols)S[c]={};saveLocal();render();toast("Kõik vastused kustutatud");return}
+  for(const c of cols)for(const id of Object.keys(S[c]||{}))write(c+"/"+id,null);
+  for(const id of Object.keys(S.gifts||{}))if(id!=="_plan"&&id!=="_codes")write("gifts/"+id,null);
+  for(const p of pids())if(p!==me){if(db&&db.fb){const g=guestOf(p);if(g)write("taken/"+g,null)}write("players/"+p,null)}
+  for(const c of cols)S[c]={};
+  S.state=st;render();write("game/state",S.state);toast("Kõik vastused kustutatud. Mäng on puhas.");
+}
+function resetMarks(){for(const id of Object.keys(S.bingo))if((S.bingo[id]?.m||[]).length)put("bingo",id,{m:[],at:null})}
+function removePlayer(p){ui.confirm=null;if(db&&db.fb){const g=guestOf(p);if(g)write("taken/"+g,null)}for(const c of ["players","votes","feud","bingo","spins"])if(S[c][p])put(c,p,null);if(S.gifts[p]&&p!=="_plan")put("gifts",p,null);if(S.capsule[p]&&mode==="local")put("capsule",p,null)}
+
+/* ---------- views ---------- */
+function banner(){if(window.__fbError)return`<div class="note warn"><b>Ühendus mänguga ei õnnestunud.</b> Proovi lehte uuesti laadida. Kui see ei aita, anna Anettile teada. (${esc(window.__fbError)})</div>`;
+  if(mode==="shared"&&!canWrite)return`<div class="note warn">Sa näed mängu, aga ei saa hääletada ega vastata. Palu korraldajal sind kutsuda oma e-posti aadressiga ja muutmisõigusega, siis saad kaasa mängida.</div>`;
+  return"";
+}
+const SEED={"guests": [{"name": "Anett"}, {"name": "Margus"}, {"name": "Jaak"}, {"name": "Sirje"}, {"name": "Heino"}, {"name": "Janika"}, {"name": "Risto"}, {"name": "Enriko"}, {"name": "Kristo"}, {"name": "Brita", "noGift": true}, {"name": "Mia Liisa", "noGift": true}], "bingo": ["Keegi räägib ilmast", "Keegi pakub mitmendat korda süüa", "Keegi mainib eelmised jõule", "Keegi ütleb „Kõht on nii täis“ ja võtab veel", "Keegi räägib tööst", "Keegi teeb toidust pilti", "Keegi küsib kas midagi on laktoosivaba", "Keegi uurib, millal kingitusi saab", "Keegi läheb kööki ja tuleb tühjade kätega tagasi", "Kellelgi pole luuletus peas", "Keegi kiidab toitu", "Keegi ajab kellegi nimed segi", "Keegi teeb kellelegi komplimendi", "Keegi laulab niisama", "Keegi pakub midagi kellelegi maitsta", "Keegi küsib Mialt, kas ta juba ootab kooli minemist", "Keegi pakub kohvi", "Tehakse grupipilti", "Keegi räägib autodest", "Keegi ajab midagi ümber või endale peale", "Keegi küsib retsepti"], "feud": ["Kellel on parim jõululaul või -luuletus?", "Mis toit peab jõululaual kindlasti olema?", "Mida keegi meie peres igal jõulul kindlasti ütleb?", "Mis on kõige parem jõulukingitus?", "Mis on kõige halvem jõulukingitus?", "Mis on kõige parem jõulufilm?"]};
+function setupCard(){
+  return`<form class="card join" data-act="setup"><p class="eyebrow">Esimene käivitus</p><h2>Seadista mäng</h2>
+  <p class="muted">Seda näed ainult üks kord. Vali, kes oled sina (host), ja pane endale kood. Teistele külalistele tehakse koodid automaatselt ja need on pärast näha hosti vaates.</p>
+  <label class="f" for="setupwho">Mina olen<select id="setupwho" class="bigsel">${SEED.guests.map((g,i)=>`<option value="${i}" ${(ui.drafts.setupwho??"0")==String(i)?"selected":""}>${esc(g.name)}</option>`).join("")}</select></label>
+  <label class="f" for="setupcode">Minu kood (hosti kood)<input type="text" id="setupcode" class="bigin" maxlength="24" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Näiteks hostess" value="${esc(ui.drafts.setupcode??"")}"></label>
+  <p class="muted">Külalised: ${SEED.guests.map(g=>esc(g.name)+(g.noGift?" (ei osale loosipakis)":"")).join(", ")}</p>
+  ${ui.joinErr?`<p class="note warn">${esc(ui.joinErr)}</p>`:""}
+  <button class="btn wide" type="submit" ${ui.joining?"disabled":""}>${ui.joining?"Seadistan…":"Alusta mängu"}</button></form>`;
+}
+function joinCard(){
+  if(mode!=="shared"||!canWrite||S.players[me])return"";
+  const used=new Set(pids().map(p=>S.players[p].hue));
+  if(ui.hue==null){ui.hue=HUES.findIndex((_,i)=>!used.has(i));if(ui.hue<0)ui.hue=0}
+  const taken=(db&&db.fb)?new Set():takenGuests(),free=guests().filter(g=>!taken.has(g.id));
+  const other=false;
+  const sel=ui.joinGuest&&free.some(g=>g.id===ui.joinGuest)?ui.joinGuest:null;
+  const prev=sel?gname(sel):(ui.drafts.joinname||"").trim();
+  return`<form class="card join" data-act="join">
+  <div class="joinbb"><span class="bb lg" style="--h:${HUES[ui.hue]}" aria-hidden="true">${esc((prev[0]||"?").toUpperCase())}</span></div>
+  <h2 style="text-align:center">Kes sa oled?</h2>
+  <p class="muted" style="text-align:center">Vajuta oma nimele ja sisesta oma isiklik kood, mille said Anettilt.</p>
+  ${!other?`<div class="gpick">${free.map(g=>`<button type="button" class="gbtn" data-act="pickguest" data-g="${g.id}" aria-pressed="${sel===g.id}">${esc(g.name)}</button>`).join("")}</div>
+    <p class="muted" style="text-align:center;font-size:14px">Kui sinu nime pole nimekirjas, anna Anettile teada.</p>`:
+   `<label class="f" for="joinname"><span class="sr">Sinu nimi</span><input type="text" id="joinname" class="bigin" maxlength="24" autocomplete="off" placeholder="Sinu nimi" value="${esc(ui.drafts.joinname??"")}"></label>${guests().length?`<button type="button" class="linkbtn" data-act="joinlist">Tagasi nimekirja juurde</button>`:""}`}
+  <label class="f" for="joincode"><span class="sr">Kood</span><input type="text" id="joincode" class="bigin" maxlength="24" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Kood" value="${esc(ui.drafts.joincode??"")}"></label>
+  ${ui.joinErr?`<p class="note warn" style="text-align:center">${esc(ui.joinErr)}</p>`:""}
+  <button class="btn wide" type="submit" ${ui.joining?"disabled":""}>${ui.joining?"Liitun…":"Mängi!"}</button></form>`;
+}
+function gateVote(label,isDone){
+  if(mode==="local"){
+    if(ui.turn&&S.players[ui.turn])return null;
+    const ps=pids();
+    if(!ps.length)return`<div class="note">Lisa avalehel kõigepealt mängijad.</div>`;
+    return`<div class="card"><h3>${esc(label)}</h3><p class="muted">Anna telefon järgmisele ja vali tema nimi.</p><div class="choices">${ps.map(p=>`<button class="choice ${isDone(p)?"done":""}" data-act="turn" data-p="${p}">${bb(p)}<span>${esc(nm(p))}</span></button>`).join("")}</div></div>`;
+  }
+  if(!canWrite)return"";
+  if(!S.players[me])return`<div class="note">Sisesta ülal oma nimi, et osaleda.</div>`;
+  return null;
+}
+function turnHead(){
+  if(mode!=="local"||!ui.turn)return"";
+  return`<div class="row">${bb(ui.turn)}<b>${esc(nm(ui.turn))} kord</b><span class="spacer"></span><button class="btn ghost sm" data-act="unturn">Vaheta mängijat</button></div>`;
+}
+function progress(done,total,label){const pc=total?Math.round(done/total*100):0;return`<div class="progress"><div class="track"><div class="fill" style="width:${pc}%"></div></div><span>${done}/${total} ${label}</span></div>`}
+function spotBtn(){return""}
+
+function meBar(){
+  if(mode!=="shared"||!S.players[me])return"";
+  if(ui.confirm&&ui.confirm.logout)return`<div class="card mebar"><p>Kas logida välja? Sinu vastused jäävad alles ja saad samal telefonil uuesti liituda.</p><div class="row"><button class="btn ghost sm" data-act="cancel">Ei</button><button class="btn red sm" data-act="logout">Logi välja</button></div></div>`;
+  return`<div class="mebar row">${bb(me)}<span><span class="muted">Sisse logitud</span><br><b>${esc(nm(me))}${ui.role?" · host":""}</b></span><span class="spacer"></span><button class="btn ghost sm" data-act="asklogout">Logi välja</button></div>`;
+}
+function infoCard(){
+  const f=S.state.info||{};const parts=[["Millal ja kus",f.when],["Kes mida kaasa võtab",f.bring],["Muu info",f.other]].filter(x=>x[1]&&String(x[1]).trim());
+  if(!parts.length)return"";
+  return`<section class="card infocard"><p class="eyebrow">Info Anettilt</p>${parts.map(([t,v])=>`<div class="ib"><h3>${t}</h3><p class="pre">${esc(String(v).trim())}</p></div>`).join("")}</section>`;
+}
+function infoEditor(){
+  const f=S.state.info||{},v=k=>esc(ui.drafts["info-"+k]??f[k]??"");
+  return`<section class="card"><p class="eyebrow">Info kõigile</p><h3>Teade avalehele</h3><p class="muted">See ilmub kõigi avalehele kohe, kui vajutad „Saada kõigile”. Tühjaks jäetud lahtreid ei näidata.</p>
+  <label class="f" for="info-when">Millal ja kus<textarea id="info-when" rows="2" placeholder="Näiteks 24. detsember kell 17:00, vanaema juures Aasperes">${v("when")}</textarea></label>
+  <label class="f" for="info-bring">Kes mida kaasa võtab<textarea id="info-bring" rows="5" placeholder="Iga inimene eraldi real, näiteks&#10;Margus: kartulisalat&#10;Sirje: piparkoogid">${v("bring")}</textarea></label>
+  <label class="f" for="info-other">Muu info<textarea id="info-other" rows="3" placeholder="Näiteks riietus, parkimine, loosipaki hinnalagi">${v("other")}</textarea></label>
+  <button class="btn wide" data-act="saveinfo">Saada kõigile</button></section>`;
+}
+function homeView(){
+  const ps=pids().filter(p=>S.players[p].active!==false);
+  let h=meBar()+`<section class="card"><h2>Tere tulemast pere jõululauda</h2><p class="muted">Õhtu jooksul mängime nelja mängu. Anett ütleb, millist mängu parasjagu mängime, ja selle leiad ülevalt vahekaartidelt.</p></section>`;
+  h+=infoCard();
+  if(mode==="local")h+=`<section class="card"><div class="row"><h3>Laua taga</h3><span class="spacer"></span><span class="muted">${ps.length} mängijat</span></div>
+   ${ps.length?`<div class="players">${ps.map(p=>`<div class="pl">${bb(p,"lg")}<span>${esc(nm(p))}${p===me?" (sina)":""}</span>${isHost&&p!==me?`<button class="x" data-act="askrm" data-p="${p}" aria-label="Eemalda ${esc(nm(p))}">×</button>`:""}</div>`).join("")}</div>`:`<p class="muted">Mängijad ilmuvad siia, kui nad liituvad.</p>`}
+   ${ui.confirm&&ui.confirm.rm?`<div class="note warn row">Eemaldada ${esc(nm(ui.confirm.rm))} ja tema vastused?<span class="spacer"></span><button class="btn ghost sm" data-act="cancel">Ei</button><button class="btn red sm" data-act="rm" data-p="${ui.confirm.rm}">Eemalda</button></div>`:""}
+   ${mode==="local"?`<form class="linkrow" data-act="addp"><input type="text" id="addname" maxlength="24" autocomplete="off" placeholder="Lisa mängija nimi" value="${esc(ui.drafts.addname??"")}"><button class="btn sm" type="submit">Lisa</button></form>`:""}
+  </section>`;
+  h+=`<div class="games">${visGames().map((g,i)=>`<button class="game ${locked(g.k)?"lockd":""}" style="--gc:${g.c};--gf:${g.f}" data-act="view" data-k="${g.k}"><span class="num">${i+1}</span><span><span class="n">${esc(g.n)}</span><br><span class="muted">${locked(g.k)?"Avaneb siis, kui Anett selle avab.":esc(g.d)}</span></span><span class="go" aria-hidden="true">${locked(g.k)?"🔒":"›"}</span></button>`).join("")}</div>`;
+  return h;
+}
+function hostTools(){
+  let h="";
+  {
+    h+=`<section class="card"><h3>Tööriistad</h3>
+    <p class="muted">Suure ekraani vaate jaoks ava sama link teleris või sülearvutis ja lisa selle lõppu <b>#ekraan</b>.</p>
+    <div class="row"><button class="btn ghost sm" data-act="screen">Ava ekraanivaade siin</button>
+    ${dbAvail?`<button class="btn ghost sm" data-act="mode">${mode==="shared"?"Mängi ühe telefoniga":"Mängi kõigi telefonidega"}</button>`:""}
+    ${ui.confirm&&ui.confirm.reset?`<span class="spacer"></span><button class="btn ghost sm" data-act="cancel">Tühista</button><button class="btn red sm" data-act="reset">Jah, kustuta</button>`:`<button class="btn ghost sm" data-act="askreset">Kustuta proovimise andmed</button>`}</div>
+    ${ui.confirm&&ui.confirm.reset?`<p class="muted">Kustutatakse kõik hääled, Rooside sõja vastused, bingomärgid ja ajakapsli ennustused ning kõik peale sinu logitakse välja. Mängud lähevad uuesti lukku. Alles jäävad külalised, koodid, loosipakkide määrangud, bingo ruudud ja küsimused.</p>`:""}
+    </section>`;
+  }
+  return h;
+}
+
+const revd=i=>(S.state.rev||[]).includes(i);
+const votedAll=p=>AWARDS.every((_,i)=>votedAward(p,i));
+function awardsView(){
+  const ps=pids();
+  let h=`<section class="card"><p class="eyebrow">Auhinnad</p><h2>Hääleta kõigis kategooriates</h2><p class="muted">Vali igas kategoorias üks pereliige. Hääletus on salajane. Anett avab tulemused ükshaaval.</p>${progress(ps.filter(votedAll).length,ps.length,"hääletanud kõik")}</section>`;
+  const g=gateVote("Kelle kord hääletada?",votedAll);
+  if(g!==null){if(!isHost)return h+g;h+=g}
+  const a=g===null?actor():null;
+  if(mode==="local"&&a)h+=`<div class="card">${turnHead()}</div>`;
+  h+=AWARDS.map((q,i)=>{
+    const open=revd(i),done=ps.filter(p=>votedAward(p,i)).length,mine=a?S.votes[a]?.awards?.[i]:null;
+    let c=`<section class="card" id="aw${i}"><div class="row"><p class="eyebrow">Kategooria ${i+1}/${AWARDS.length}</p><span class="spacer"></span><span class="muted">${open?"Tulemus avatud":`${done}/${ps.length}`}</span></div><h2>${esc(q)}</h2>`;
+    if(open)c+=resultsHTML(i);
+    else if(a)c+=`<div class="choices compact">${cands().map(p=>`<button class="choice" data-act="vote" data-i="${i}" data-v="${p}" aria-pressed="${voteKey(mine)===p}">${cbb(p)}<span>${esc(cnm(p))}</span></button>`).join("")}</div>${mine?`<p class="okmsg">✓ Hääl on kirjas</p>`:""}`;
+    if(isHost)c+=`<button class="btn ${open?"ghost":""} sm" data-act="rev" data-i="${i}">${open?"Peida tulemus":"Näita tulemust"}</button>`;
+    return c+`</section>`;
+  }).join("");
+  if(mode==="local"&&a)h+=`<button class="btn wide" data-act="unturn">Valmis, anna telefon edasi</button>`;
+  if(AWARDS.every((_,i)=>revd(i)))h+=summaryCard();
+  return h;
+}
+function leaderRows(t,rows,popFirst){
+  const max=t[0].n;
+  return`<ol class="leader">${rows.map((x,k)=>{const rank=t.findIndex(y=>y.n===x.n)+1;
+    return`<li class="${rank===1?"top":""} ${popFirst&&k===0?"pop":""}"><span class="rk">${rank}.</span>${cbb(x.p)}<div class="t"><b>${esc(cnm(x.p))}</b><div class="tr"><i style="width:${x.n/max*100}%"></i></div></div><span class="c">${x.n} ${x.n===1?"hääl":"häält"}</span></li>`}).join("")}</ol>`;
+}
+function resultsHTML(i){
+  const t=tally(i);if(!t.length)return`<p class="muted">Selles kategoorias keegi ei hääletanud.</p>`;
+  const max=t[0].n,top=t.filter(x=>x.n===max);
+  return`<div class="winner"><p class="trophy">Tiitli võitja${top.length>1?"d":""}</p><div class="row" style="justify-content:center;gap:16px">${top.map(x=>cbb(x.p,"lg")).join("")}</div><p class="nm">${top.map(x=>esc(cnm(x.p))).join(" & ")}</p></div>
+  <p class="trophy" style="text-align:center">Edetabel</p>${leaderRows(t,t,false)}`;
+}
+function summaryCard(){
+  return`<section class="card"><p class="eyebrow">Auhinnad 2026</p><h2>Selle aasta tiitlid</h2><ul class="awardlist">${AWARDS.map((a,i)=>{const t=tally(i);const top=t.length?t.filter(x=>x.n===t[0].n):[];
+   return`<li>${top.length?cbb(top[0].p):`<span class="bb" style="--h:#355e50">?</span>`}<div><div class="q">${esc(a)}</div><div class="w">${top.length?top.map(x=>esc(cnm(x.p))).join(" & "):"Hääli polnud"}</div></div></li>`}).join("")}</ul></section>`;
+}
+
+function feudView(){
+  const st=S.state,ps=pids();
+  let h=feudBoardCard(false);
+  const g=gateVote("Kes vastab?",feudDone);
+  if(g!==null)return h+g;
+  const a=actor(),cur=S.feud[a]?.a||[];
+  h+=`<form class="card" data-act="savefeud"><p class="eyebrow">Rooside sõda</p>${progress(ps.filter(feudDone).length,ps.length,"vastanud")}${turnHead()}${FQ().map((q,i)=>`<label class="f" for="q${i}">${esc(q)}<input type="text" id="q${i}" maxlength="60" autocomplete="off" value="${esc(ui.drafts["q"+i]??cur[i]??"")}"></label>`).join("")}<button class="btn wide" type="submit">${feudDone(a)?"Uuenda vastuseid":"Salvesta vastused"}</button>${feudDone(a)?`<p class="okmsg">✓ Sinu vastused on kirjas</p>`:""}</form>`;
+  return h;
+}
+function feudBoardCard(stage){
+  const st=S.state,i=st.fq||0,b=feudBoard(i),sh=st.shown||[];
+  return`<section class="card"><p class="eyebrow">Küsimus ${i+1}/${FQ().length}</p><h2>${esc(FQ()[i])}</h2>
+  ${b.length?`<div class="board">${b.map((x,r)=>{const open=sh.includes(r);const inner=`<span class="r">${r+1}</span><span class="a">${open?esc(x.text):"• • •"}</span>${open?`<span class="c">${x.n}</span>`:"<span></span>"}`;
+    return isHost&&!stage?`<button class="slot ${open?"open":"hid"}" data-act="slot" data-r="${r}" aria-label="${open?"Peida":"Ava"} vastus ${r+1}">${inner}</button>`:`<div class="slot ${open?"open":"hid"}">${inner}</div>`}).join("")}</div>`:`<p class="muted">Sellele küsimusele pole veel keegi vastanud.</p>`}
+  ${isHost&&!stage&&b.length?`<p class="muted">Puuduta rida, et vastus avada. Numbrid näitavad, mitu pereliiget nii vastas.</p>`:""}</section>`;
+}
+
+function rouletteView(){
+  let h=spotBtn("roulette");
+  const tp=S.state.toast;
+  if(tp&&S.players[tp])h+=`<div class="toastpick">${bb(tp)}<div><span class="muted" style="color:#fbe0e3">Järgmise toosti teeb</span><br><b>${esc(nm(tp))}</b></div></div>`;
+  h+=`<section class="card"><p class="eyebrow">Jõulurulett</p><h2>Keeruta ratast</h2>
+  <div class="wheelwrap"><div class="pointer"></div><canvas id="wheel" style="transform:rotate(${ui.rot}deg)" aria-label="Õnneratas"></canvas><div class="hub">Jõulud</div></div>
+  <button class="btn wide" data-act="spin" ${ui.spinning?"disabled":""}>Keeruta</button>
+  ${ui.result!=null?`<div class="result"><p class="trophy">Ratas otsustas</p><p class="big">${esc(WHEEL[ui.result].t)}</p></div>`:""}
+  ${isHost&&pids().length?`<button class="btn ghost wide" data-act="toastpick">Loosi, kes teeb järgmise toosti</button>`:""}</section>`;
+  const log=Object.entries(S.spins).sort((a,b)=>(b[1].t||0)-(a[1].t||0)).slice(0,6);
+  if(log.length)h+=`<section class="card"><h3>Viimati keerutasid</h3><div class="bars">${log.map(([p,s])=>`<div class="bar">${S.players[p]?bb(p):`<span class="bb" style="--h:#355e50">•</span>`}<div class="t"><b>${S.players[p]?esc(nm(p)):"Keegi"}</b><span class="muted">${esc(WHEEL[s.r]?.t||"")}</span></div><span></span></div>`).join("")}</div></section>`;
+  return h;
+}
+
+function bingoView(){
+  const w=bingoWinner();
+  let h=spotBtn("bingo");
+  if(w)h+=`<section class="card" style="align-items:center;text-align:center"><p class="trophy">Esimene bingo</p>${bb(w.p,"lg")}<p class="bingobanner">${esc(nm(w.p))}</p></section>`;
+  const g=gateVote("Kelle bingolaud?",p=>(S.bingo[p]?.m||[]).length>0);
+  if(g!==null)return h+`<section class="card"><p class="eyebrow">Bingo</p><h2>Igaühel oma bingolaud</h2><p class="muted">Bingo kestab terve õhtu. Kui midagi ruudus kirjeldatut laua taga juhtub, märgi see ära. Kolm ritta, veergu või diagonaali annab bingo.</p></section>`+g;
+  const a=actor(),board=boardFor(a),m=S.bingo[a]?.m||[],lines=bingoLines(m).flat();
+  h+=`<section class="card">${turnHead()}<div class="row"><p class="eyebrow">Sinu bingolaud</p><span class="spacer"></span><span class="muted">${m.length}/9 märgitud</span></div>
+  ${lines.length?`<p class="bingobanner">Bingo!</p>`:""}
+  <div class="bingo">${board.map((b,pos)=>`<button lang="et" class="sq ${lines.includes(pos)?"line":""} ${(()=>{const t=bingoItems()[b]||"";return t.length>34||t.split(/\s+/).some(w=>w.length>10)?"long":""})()}" data-act="sq" data-pos="${pos}" aria-pressed="${m.includes(pos)}">${esc(bingoItems()[b]||"")}</button>`).join("")}</div>
+  <p class="muted">Laud on ainult sinu oma. Teised näevad vaid seda, kes saab esimesena bingo.</p></section>`;
+  return h;
+}
+
+const wishItems=p=>S.wishes[p]?.items||[];
+const myClaims=()=>S.claims[actor()]?.c||[];
+function claimedBy(key){for(const p of Object.keys(S.claims)){if((S.claims[p]?.c||[]).includes(key))return p}return null}
+function safeLink(u){u=String(u||"").trim();if(!u)return"";if(!/^https?:\/\//i.test(u))u="https://"+u;return u}
+function wishesView(){
+  const ps=pids();
+  let h=`<section class="card"><p class="eyebrow">Soovinimekiri</p><h2>Mida sa kingiks sooviksid?</h2><p class="muted">Pane oma soovid kirja enne jõuluõhtut. Teised näevad sinu nimekirja ja saavad märkida „Mina ostan”, et sama kinki ei ostaks kaks inimest. Sina ise ei näe, kes mida ostab.</p></section>`;
+  const g=gateVote("Kelle soovinimekiri?",p=>wishItems(p).length>0);
+  if(g!==null)return h+g+othersWishes(null);
+  const a=actor(),mine=wishItems(a);
+  h+=`<section class="card">${turnHead()}<h3>Minu soovid</h3>
+  ${mine.length?`<ul class="wl">${mine.map(it=>`<li><div class="wt"><b>${esc(it.t)}</b>${it.link?`<a href="${esc(safeLink(it.link))}" target="_blank" rel="noopener">Vaata linki ↗</a>`:""}</div><button class="btn ghost sm" data-act="wdel" data-id="${it.id}" aria-label="Kustuta ${esc(it.t)}">Kustuta</button></li>`).join("")}</ul>`:`<p class="muted">Sinu nimekiri on veel tühi. Lisa esimene soov allpool.</p>`}
+  <form class="wadd" data-act="wadd">
+    <label class="f" for="wtext">Soov<input type="text" id="wtext" maxlength="120" autocomplete="off" placeholder="Näiteks soojad sokid või raamat" value="${esc(ui.drafts.wtext??"")}"></label>
+    <label class="f" for="wlink">Link (kui on)<input type="text" id="wlink" maxlength="400" autocomplete="off" inputmode="url" placeholder="Poe või toote link" value="${esc(ui.drafts.wlink??"")}"></label>
+    <button class="btn wide" type="submit">Lisa soov</button>
+  </form>
+  ${mine.length?`<p class="okmsg">✓ Sinu nimekirjas on ${mine.length} ${mine.length===1?"soov":"soovi"}</p>`:""}</section>`;
+  return h+othersWishes(a);
+}
+function othersWishes(a,stage){
+  const ps=pids().filter(p=>p!==a&&wishItems(p).length);
+  if(!ps.length)return`<section class="card"><h3>Teiste soovid</h3><p class="muted">Kui keegi lisab oma soovid, ilmuvad need siia.</p></section>`;
+  const mc=myClaims(),canClaim=!stage&&!!a&&(mode==="shared");
+  return`<section class="card"><h3>${stage?"Pere soovinimekirjad":"Teiste soovid"}</h3><div class="wpeople">${ps.map(p=>`<div class="wp"><div class="row" style="gap:10px">${bb(p)}<b class="wn">${esc(nm(p))}</b></div>
+   <ul class="wl">${wishItems(p).map(it=>{const key=p+":"+it.id,by=claimedBy(key),me2=mc.includes(key);
+     return`<li class="${by&&!stage?"taken":""}"><div class="wt"><b>${esc(it.t)}</b>${it.link?`<a href="${esc(safeLink(it.link))}" target="_blank" rel="noopener">Vaata linki ↗</a>`:""}</div>
+     ${canClaim?(me2?`<button class="btn sm" data-act="wclaim" data-k="${esc(key)}">✓ Sina ostad</button>`:by?`<span class="muted">Keegi juba ostab</span>`:`<button class="btn ghost sm" data-act="wclaim" data-k="${esc(key)}">Mina ostan</button>`):""}</li>`}).join("")}</ul></div>`).join("")}</div></section>`;
+}
+function giftsView(){
+  let h="";
+  if(ui.role||mode==="local")h+=giftsEditor();
+  if(ui.role&&!ui.asPlayer&&mode==="shared")return h;
+  const g=gateVote("Kelle loosipakk?",p=>!!giftTarget(p));
+  if(g!==null)return h+g;
+  const a=actor(),to=giftTarget(a);
+  h+=`<section class="card giftcard">${turnHead()}<p class="eyebrow">Sinu loosipakk</p>`;
+  if(to)h+=`<p class="muted" style="text-align:center">Sina teed loosipaki inimesele</p><div class="winner"><span class="bb lg" style="--h:#6B3F69" aria-hidden="true">${esc(to[0].toUpperCase())}</span><p class="nm">${esc(to)}</p></div>`;
+  else h+=`<h2>Veel pole kedagi määratud</h2><p class="muted">Anett paneb peagi kirja, kellele sa loosipaki teed. Siis ilmub nimi siia ise.</p>`;
+  return h+`</section>`;
+}
+function giftsEditor(){
+  const gs=guests().filter(g=>!g.noGift),pl=plan();
+  if(gs.length<2)return`<section class="card"><p class="eyebrow">Loosipakid · määramine</p><h3>Kes kellele kingi teeb</h3><p class="muted">Lisa hosti vaates külaliste nimekirja vähemalt kaks loosipakis osalejat.</p></section>`;
+  const tos=gs.map(g=>pl[g.id]).filter(Boolean);
+  const dup=gs.filter(g=>tos.filter(t=>t===g.id).length>1);
+  const none=gs.filter(g=>!tos.includes(g.id));
+  const unset=gs.filter(g=>!pl[g.id]);
+  const out=guests().filter(g=>g.noGift);
+  return`<section class="card"><p class="eyebrow">Loosipakid · määramine</p><h3>Kes kellele kingi teeb</h3>
+  <p class="muted">Vali iga inimese juurde, kellele ta loosipaki teeb. Tervet nimekirja näed ainult sina. Iga pereliige näeb vaid seda, kellele tema kingi teeb, ja seda alles siis, kui avad Loosipakid kõigile.</p>
+  <div class="assign">${gs.map(g=>`<label class="arow" for="as-${g.id}"><span class="an">${esc(g.name)}</span><span class="arr" aria-hidden="true">→</span>
+    <select id="as-${g.id}" data-act-change="assign" data-g="${g.id}"><option value="">Vali…</option>${gs.filter(x=>x.id!==g.id).map(x=>`<option value="${x.id}" ${pl[g.id]===x.id?"selected":""}>${esc(x.name)}</option>`).join("")}</select></label>`).join("")}</div>
+  ${unset.length?`<p class="note">Määramata: ${unset.map(g=>esc(g.name)).join(", ")}</p>`:""}
+  ${dup.length?`<p class="note warn">Kaks või enam inimest teevad kingi samale inimesele: ${dup.map(g=>esc(g.name)).join(", ")}</p>`:""}
+  ${!unset.length&&none.length?`<p class="note warn">Kingita jääb: ${none.map(g=>esc(g.name)).join(", ")}</p>`:""}
+  ${!unset.length&&!dup.length&&!none.length?`<p class="okmsg">✓ Kõigil on loosipakk ja igaüks saab ühe kingi</p>`:""}
+  ${out.length?`<p class="muted">Loosipakis ei osale: ${out.map(g=>esc(g.name)).join(", ")}</p>`:""}
+  </section>`;
+}
+function guestsEditor(){
+  const gs=guests(),taken=new Map();for(const p of pids()){const g=guestOf(p);if(g&&S.players[p].active!==false)taken.set(g,p)}
+  return`<section class="card"><p class="eyebrow">Külalised</p><h3>Külaliste nimekiri · ${gs.length}</h3>
+  <p class="muted">Liitudes vajutab igaüks oma nimele ja sisestab oma koodi. Koode näed ainult sina. Linnuke tähendab, et inimene osaleb loosipakis.</p><button class="btn ghost sm" data-act="copycodes">Kopeeri kõik koodid</button>
+  ${ui.confirm&&ui.confirm.rel&&S.players[ui.confirm.rel]?`<div class="note warn row">Logida ${esc(nm(ui.confirm.rel))} välja, et ta saaks uuesti liituda? Tema vastused jäävad alles.<span class="spacer"></span><button class="btn ghost sm" data-act="cancel">Ei</button><button class="btn sm" data-act="rel" data-p="${ui.confirm.rel}">Logi välja</button></div>`:""}
+  <ul class="gedit">${gs.map(g=>`<li><b>${esc(g.name)}</b><span class="gst">${taken.has(g.id)?"✓ liitunud":"ootab"}</span>${taken.has(g.id)&&taken.get(g.id)!==me?`<button class="btn ghost sm" data-act="askrel" data-p="${taken.get(g.id)}">Vabasta</button>`:""}<span class="gcode">${codes()[g.id]?esc(codes()[g.id]):"–"}</span><button class="btn ghost sm" data-act="regencode" data-g="${g.id}" aria-label="Uus kood: ${esc(g.name)}">Uus kood</button>
+    <label class="gchk"><input type="checkbox" data-act-change="nogift" data-g="${g.id}" ${g.noGift?"":"checked"}> Loosipakk</label>
+    <button class="btn ghost sm" data-act="delguest" data-g="${g.id}" aria-label="Eemalda ${esc(g.name)}">×</button></li>`).join("")}</ul>
+  <form class="linkrow" data-act="addguest"><input type="text" id="addguest" maxlength="24" autocomplete="off" placeholder="Lisa külaline" value="${esc(ui.drafts.addguest??"")}"><button class="btn sm" type="submit">Lisa</button></form>
+  </section>`;
+}
+function syncGifts(){
+  if(mode!=="shared"||!ui.role||!S.gifts)return;
+  for(const p of ((db&&db.fb)?guests().map(x=>x.id):pids())){const g=(db&&db.fb)?p:guestOf(p),pl=plan();const want=g&&pl[g]?gname(pl[g]):null;const d=S.gifts[p];const ok=want?(d&&d.toName===want&&d.forGuest===g):!d;
+    if(!ok){if(want)S.gifts[p]={toName:want,forGuest:g};else delete S.gifts[p];write("gifts/"+p,want?{toName:want,forGuest:g}:null)}}
+}
+function capsuleView(){
+  const ps=pids();
+  let h=spotBtn("capsule");
+  h+=`<section class="card"><div class="seal"><span class="wax">27</span><div><p class="eyebrow">Ajakapsel</p><h2>Avatakse 2027. aasta jõuludel</h2></div></div><p class="muted">Kirjuta oma ennustused järgmiseks aastaks. Kapsel suletakse ja vastuseid näeb alles järgmistel jõuludel.</p></section>`;
+  if(isHost){
+    const all=Object.keys(S.capsule).filter(capDone);
+    h+=`<section class="card"><h3>Kapslis on ${all.length} ümbrikut</h3>
+    ${ui.capView?capsuleList(false)+`<div class="row"><button class="btn ghost sm" data-act="capclose">Sulge kapsel</button><button class="btn ghost sm" data-act="capscreen">${S.state.capOpen?"Peida ekraanilt":"Näita ekraanil"}</button></div>`:
+      ui.confirm&&ui.confirm.cap?`<p class="muted">Kas avada kapsel juba nüüd? Kõik ennustused tulevad nähtavale.</p><div class="row"><button class="btn ghost sm" data-act="cancel">Ei, ootame 2027</button><button class="btn sm" data-act="capopen">Ava kapsel</button></div>`:
+      `<button class="btn ghost sm" data-act="askcap">Ava kapsel</button>`}</section>`;
+  }
+  const g=gateVote("Kes kirjutab?",capDone);
+  if(g!==null)return h+g;
+  const a=actor(),cur=S.capsule[a]?.a||[];
+  h+=`<form class="card" data-act="savecap">${turnHead()}${CAPSULE.map((q,i)=>`<label class="f" for="c${i}">${esc(q)}<textarea id="c${i}" maxlength="280">${esc(ui.drafts["c"+i]??cur[i]??"")}</textarea></label>`).join("")}<button class="btn wide" type="submit">${capDone(a)?"Uuenda ennustusi":"Pane kapslisse"}</button>
+  ${capDone(a)?`<p class="okmsg">✓ Sinu ennustused on kapslis</p>`:""}</form>`;
+  return h;
+}
+function capsuleList(){
+  return`<div class="preds">${CAPSULE.map((q,i)=>{const rows=Object.keys(S.capsule).filter(p=>(S.capsule[p].a||[])[i]?.trim());
+   return`<div><h3>${esc(q)}</h3>${rows.length?`<ul>${rows.map(p=>`<li>${bb(p)}<span><b>${esc(nm(p))}:</b> ${esc(S.capsule[p].a[i])}</span></li>`).join("")}</ul>`:`<p class="muted">Vastuseid pole.</p>`}</div>`}).join("")}</div>`;
+}
+
+/* ---------- host view ---------- */
+function lockedCard(g){
+  return`<section class="card lockcard"><span class="lockico" aria-hidden="true">🔒</span><p class="eyebrow">${esc(g.n)}</p><h2>See mäng on veel lukus</h2><p class="muted">Anett avab selle õhtu jooksul. Siis ilmub mäng siia ise, lehte ei pea uuesti laadima.</p></section>`;
+}
+function openCtl(){
+  const o=S.state.opened||{};
+  return`<section class="card"><p class="eyebrow">Mängude avamine</p><h3>Mis on kõigile lahti?</h3><p class="muted">Mängud näevad pereliikmed alles siis, kui sa need avad. Sina näed kõiki mänge alati.</p>
+  <div class="opengrid">${LOCKABLE.map(k=>{const g=GAMES.find(x=>x.k===k),on=!!o[k];return`<div class="openrow" style="--gc:${g.c}"><span class="dot" aria-hidden="true"></span><b>${esc(g.n)}</b><span class="spacer"></span><span class="st ${on?"on":""}">${on?"Lahti":"Lukus"}</span><button class="btn ${on?"ghost":""} sm" data-act="togopen" data-k="${k}">${on?"Lukusta":"Ava kõigile"}</button></div>`}).join("")}</div></section>`;
+}
+function hostView(){
+  const ps=pids();
+  let h=meBar()+`<section class="card"><p class="eyebrow">Hosti vaade</p><h2>${(()=>{const n=pids().filter(p=>S.players[p].active!==false).length,t=guests().length;return n?`Liitunud ${n}${t?" / "+t:""}`:"Ootame, et pere liituks"})()}</h2><p class="muted">Ütle laua taga, mis mängu mängime. Tulemuste näitamiseks ava esitlusvaade tahvlil või teleris: seal näeb kohe, kes on hääletanud, ja vastused avanevad sinu vajutusel ükshaaval.</p><button class="btn wide" data-act="present">Ava esitlusvaade</button></section>`;
+  h+=openCtl()+infoEditor()+guestsEditor()+giftsEditor()+hostAwards()+feudBoardCard(false)+`<div class="row">${feudCtl()}</div>`+feudEditor()+hostBingo()+bingoEditor();
+  h+=hostStatus();
+  h+=hostTools();
+  return h;
+}
+function awardsCtl(){
+  const st=S.state,end=st.idx>=AWARDS.length;
+  return`<button class="btn ghost sm" data-act="back" data-k="awards" ${st.idx===0&&st.phase==="vote"?"disabled":""}>Tagasi</button>`+(end?"":st.phase==="vote"?`<button class="btn sm" data-act="adv" data-k="awards">Näita tulemust</button>`:`<button class="btn sm" data-act="adv" data-k="awards">${st.idx===AWARDS.length-1?"Kokkuvõte":"Järgmine kategooria"}</button>`);
+}
+function feudCtl(){
+  const q=S.state.fq||0;
+  return`<button class="btn ghost sm" data-act="back" data-k="feud" ${q===0?"disabled":""}>Eelmine küsimus</button><button class="btn ghost sm" data-act="showall">Ava kõik</button><button class="btn sm" data-act="adv" data-k="feud" ${q>=FQ().length-1?"disabled":""}>Järgmine küsimus</button>`;
+}
+function hostAwards(){
+  const ps=pids();
+  return`<section class="card"><p class="eyebrow">Auhinnad</p><h3>${ps.filter(votedAll).length}/${ps.length} on kõik hääled andnud</h3>
+  <div class="awctl">${AWARDS.map((q,i)=>{const done=ps.filter(p=>votedAward(p,i)).length,open=revd(i),t=tally(i);
+    return`<div class="awrow"><div class="awq"><b>${i+1}.</b> ${esc(q)}<br><span class="muted">${open&&t.length?"Võitja: "+t.filter(x=>x.n===t[0].n).map(x=>esc(cnm(x.p))).join(" & "):`${done}/${ps.length} häält`}</span></div><button class="btn ${open?"ghost":""} sm" data-act="rev" data-i="${i}">${open?"Peida":"Ava"}</button></div>`}).join("")}</div></section>`;
+}
+function hostRoulette(){
+  const st=S.state,ps=pids(),tp=st.toast;
+  return`<section class="card"><p class="eyebrow">Jõulurulett</p>
+  ${tp&&S.players[tp]?`<div class="toastpick">${bb(tp)}<div><span style="color:#fbe0e3">Järgmise toosti teeb</span><br><b>${esc(nm(tp))}</b></div></div>`:""}
+  <button class="btn wide" data-act="toastpick" ${ps.length?"":"disabled"}>Loosi, kes teeb järgmise toosti</button></section>`;
+}
+function feudEditor(){
+  const cur=FQ(),custom=cur!==FEUD0;
+  const val=ui.drafts.feudedit??cur.join("\n");
+  const n=val.split("\n").map(x=>x.trim()).filter(Boolean).length;
+  const answered=pids().some(feudDone);
+  return`<section class="card"><p class="eyebrow">Rooside sõda</p><h3>Muuda ja lisa küsimusi</h3>
+  <p class="muted">Üks küsimus ühel real. Uue küsimuse lisamiseks kirjuta see lihtsalt uuele reale.</p>
+  <label class="f" for="feudedit"><span class="sr">Rooside sõja küsimused</span><textarea id="feudedit" rows="8" style="min-height:200px">${esc(val)}</textarea></label>
+  <p class="muted">${n} küsimust</p>
+  <div class="row"><button class="btn sm" data-act="savefeudq">Salvesta küsimused</button>${custom?`<button class="btn ghost sm" data-act="feuddefault">Taasta algsed küsimused</button>`:""}</div>
+  ${answered?`<p class="note warn">Osa peret on juba vastanud. Küsimuse sõnastuse muutmine ja lõppu lisamine on ohutu. Kui kustutad või tõstad küsimusi ümber, nihkuvad vastused valede küsimuste alla.</p>`:""}
+  </section>`;
+}
+function bingoEditor(){
+  const cur=bingoItems(),custom=cur!==BINGO;
+  const val=ui.drafts.bingoedit??cur.join("\n");
+  const n=val.split("\n").map(x=>x.trim()).filter(Boolean).length;
+  return`<section class="card"><p class="eyebrow">Bingo ruudud</p><h3>Muuda bingo lauda</h3>
+  <p class="muted">Üks ruut ühel real. Vaja on vähemalt 9 rida. Iga mängija saab neist juhuslikult 9 ruutu.</p>
+  <label class="f" for="bingoedit"><span class="sr">Bingo ruudud</span><textarea id="bingoedit" rows="12" style="min-height:260px">${esc(val)}</textarea></label>
+  <p class="muted">${n} ruutu${n<9?" · lisa veel "+(9-n):""}</p>
+  <div class="row"><button class="btn sm" data-act="savebingo">Salvesta bingo</button>${custom?`<button class="btn ghost sm" data-act="bingodefault">Taasta algsed ruudud</button>`:""}</div>
+  ${(()=>{const any=pids().some(p=>(S.bingo[p]?.m||[]).length);return any?`<p class="note warn">Mõned on juba ruute märkinud. Kui ruute muudad, saavad kõik uued lauad ja märgid tuleb uuesti teha.</p>`:""})()}
+  </section>`;
+}
+function hostBingo(){
+  const ps=pids(),w=bingoWinner(),rows=ps.map(p=>({p,n:(S.bingo[p]?.m||[]).length})).sort((a,b)=>b.n-a.n);
+  if(!rows.length)return"";
+  return`<section class="card"><p class="eyebrow">Bingo</p><h3>${w?`Esimene bingo: ${esc(nm(w.p))}`:"Keegi pole veel bingot saanud"}</h3>
+  <div class="bars">${rows.map(x=>`<div class="bar">${bb(x.p)}<div class="t"><b>${esc(nm(x.p))}</b><div class="tr"><i style="width:${x.n/9*100}%"></i></div></div><span class="c">${x.n}</span></div>`).join("")}</div></section>`;
+}
+function hostStatus(){
+  const ps=pids();if(!ps.length)return"";
+  const ck=v=>v?'<span class="ok">✓</span>':'<span class="no">–</span>';
+  return`<section class="card"><h3>Kes mida on teinud</h3><div class="tablewrap"><table class="stat"><thead><tr><th>Mängija</th><th>Rooside sõda</th><th>Kapsel</th><th>Bingo</th><th>Hääli</th></tr></thead><tbody>
+  ${ps.map(p=>`<tr><td><span class="row" style="gap:8px;flex-wrap:nowrap">${bb(p)}<span>${esc(nm(p))}</span></span></td><td>${ck(feudDone(p))}</td><td>${ck(capDone(p))}</td><td>${(S.bingo[p]?.m||[]).length}/9</td><td>${Object.keys(S.votes[p]?.awards||{}).length}/${AWARDS.length}</td></tr>`).join("")}
+  </tbody></table></div></section>`;
+}
+
+/* ---------- presentation (tahvel) ---------- */
+function presAwards(){
+  const st=S.state,ps=pids(),i=Math.min(st.pa||0,AWARDS.length-1),t=tally(i),n=t.length,step=Math.min(st.ps||0,n);
+  if(st.pa>=AWARDS.length)return summaryCard()+(ui.role?`<div class="presctl"><button class="btn ghost" data-act="pa" data-d="-1">‹ Tagasi</button></div>`:"");
+  let h=`<section class="card"><div class="row"><p class="eyebrow">Auhinnad · kategooria ${i+1}/${AWARDS.length}</p><span class="spacer"></span><span class="muted">${ps.filter(p=>votedAward(p,i)).length}/${ps.length} hääletanud</span></div><h2>${esc(AWARDS[i])}</h2>`;
+  if(step===0){
+    h+=`<div class="voters big">${ps.map(p=>`<span class="vt ${votedAward(p,i)?"ok":""}">${bb(p)}${esc(nm(p))}</span>`).join("")}</div><p class="muted">Kuld ääris tähendab, et inimene on selles kategoorias hääletanud. Tulemused avanevad ükshaaval.</p>`;
+  }else{
+    const max=t[0].n,shown=t.slice(n-step),win=step>=n?t.filter(x=>x.n===max):[];
+    if(win.length)h+=`<div class="winner pop"><p class="trophy">Tiitli võitja${win.length>1?"d":""}</p><div class="row" style="justify-content:center;gap:16px">${win.map(x=>cbb(x.p,"lg")).join("")}</div><p class="nm">${win.map(x=>esc(cnm(x.p))).join(" & ")}</p></div>`;
+    if(win.length)h+=`<p class="trophy" style="text-align:center">Edetabel</p>`;
+    h+=leaderRows(t,shown,!win.length);
+  }
+  if(!n&&step===0&&ps.some(p=>votedAward(p,i)))h+="";
+  h+=`</section>`;
+  if(ui.role){
+    const main=n===0?`<button class="btn" disabled>Hääli pole veel</button>`:step===0?`<button class="btn" data-act="pstep">Näita tulemusi</button>`:step<n?`<button class="btn" data-act="pstep">Ava järgmine · ${n-step} jäänud</button>`:`<button class="btn" data-act="pa" data-d="1">${i===AWARDS.length-1?"Kokkuvõte":"Järgmine kategooria"}</button>`;
+    h+=`<div class="presctl"><button class="btn ghost" data-act="pa" data-d="-1" ${i===0?"disabled":""}>‹ Eelmine</button>${main}<button class="btn ghost" data-act="pa" data-d="1">Järgmine ›</button></div>`;
+  }
+  return h;
+}
+function presFeud(){
+  const st=S.state,ps=pids(),q=st.fq||0,b=feudBoard(q),sh=st.shown||[];
+  let h=feudBoardCard(true).replace('<h2>',`<p class="muted">${ps.filter(feudDone).length}/${ps.length} on vastanud</p><h2>`);
+  if(ui.role){
+    const left=b.length-sh.filter(r=>r<b.length).length;
+    h+=`<div class="presctl"><button class="btn ghost" data-act="back" data-k="feud" ${q===0?"disabled":""}>‹ Eelmine</button>${left?`<button class="btn" data-act="fnext">Ava järgmine · ${left} jäänud</button>`:`<button class="btn" data-act="adv" data-k="feud" ${q>=FQ().length-1?"disabled":""}>Järgmine küsimus</button>`}<button class="btn ghost" data-act="adv" data-k="feud" ${q>=FQ().length-1?"disabled":""}>Järgmine ›</button></div>`;
+  }
+  return h;
+}
+
+/* ---------- big screen ---------- */
+function screenView(){
+  const st={...S.state,round:ui.view==="host"?"home":ui.view},ps=pids();
+  let h=`<div class="stage">`;
+  if(st.round==="home"){
+    h+=`<div><section class="card"><p class="eyebrow">Laua taga</p><p class="bigline">${ps.length} mängijat</p><div class="players">${ps.map(p=>`<div class="pl">${bb(p,"lg")}<span>${esc(nm(p))}</span></div>`).join("")}</div></section></div>`;
+  }else if(st.round==="awards"){
+    h+=presAwards();
+  }else if(st.round==="feud"){h+=presFeud()}
+  else if(st.round==="wishes"){h+=othersWishes(null,true)}
+  else if(st.round==="roulette"){
+    const tp=st.toast,log=Object.entries(S.spins).sort((a,b)=>(b[1].t||0)-(a[1].t||0)).slice(0,5);
+    h+=`<section class="card"><p class="eyebrow">Jõulurulett</p><h2>Keeruta oma telefonis</h2>${tp&&S.players[tp]?`<div class="toastpick">${bb(tp,"lg")}<div><span>Järgmise toosti teeb</span><br><b style="font-size:40px">${esc(nm(tp))}</b></div></div>`:""}
+    ${log.length?`<div class="bars">${log.map(([p,s])=>`<div class="bar">${S.players[p]?bb(p):`<span class="bb">•</span>`}<div class="t"><b>${S.players[p]?esc(nm(p)):"Keegi"}</b><span class="muted" style="font-size:18px">${esc(WHEEL[s.r]?.t||"")}</span></div><span></span></div>`).join("")}</div>`:""}</section>`;
+  }else if(st.round==="bingo"){
+    const w=bingoWinner(),rows=ps.map(p=>({p,n:(S.bingo[p]?.m||[]).length})).sort((a,b)=>b.n-a.n);
+    h+=`<section class="card"><p class="eyebrow">Bingo</p>${w?`<div class="winner"><p class="trophy">Esimene bingo</p>${bb(w.p,"lg")}<p class="nm">${esc(nm(w.p))}</p></div>`:`<h2>Kes saab esimesena bingo?</h2>`}
+    <div class="bars">${rows.map(x=>`<div class="bar">${bb(x.p)}<div class="t"><b>${esc(nm(x.p))}</b><div class="tr"><i style="width:${x.n/9*100}%"></i></div></div><span class="c">${x.n}</span></div>`).join("")}</div></section>`;
+  }else if(st.round==="capsule"){
+    h+=`<section class="card"><div class="seal"><span class="wax">27</span><div><p class="eyebrow">Ajakapsel</p><h2>${st.capOpen?"Kapsel on avatud":"Avatakse 2027. aasta jõuludel"}</h2></div></div>${st.capOpen?capsuleList():`<p class="bigline">Kirjutage oma ennustused telefonis</p>`}</section>`;
+  }
+  return h+`</div><a href="#" class="exitscreen muted" data-act="exitscreen">Välju ekraanivaatest</a>`;
+}
+
+function hostHTML(){
+  if(ui.view==="feud")return`<div class="in"><div class="lbl"><b>Rooside sõda</b>Küsimus ${(S.state.fq||0)+1}/${FQ().length}</div>${feudCtl().replace("Eelmine küsimus","Tagasi").replace("Järgmine küsimus","Järgmine")}</div>`;
+  return"";
+}
+
+function render(){
+  if(ui.spinning){ui.pending=true;return}
+  if(ui.role&&mode==="shared"&&!ui.syncQ){ui.syncQ=true;setTimeout(()=>{ui.syncQ=false;syncGifts()},300)}
+  const st=S.state;
+  if(mode==="shared"){const role=!!S.players[me]?.host;if(role&&!ui.hostInit){ui.hostInit=true;ui.view="host"}isHost=role&&!ui.asPlayer;ui.role=role}else{ui.role=false}
+  if(!isHost&&ui.view==="host")ui.view="home";
+  if(ui.view==="gifts"&&noGiftMe())ui.view="home";
+  const key=st.idx+":"+st.phase+":"+(st.fq||0);if(key!==ui.lastKey){if(ui.lastKey&&mode==="local")ui.turn=null;ui.lastKey=key}
+  document.body.classList.toggle("screen",ui.screen);
+  const mc=$("#modechip");
+  if(ui.role){mc.outerHTML=`<div id="modechip" class="seg" role="group" aria-label="Vaade"><button data-act="setview" data-v="host" aria-pressed="${!ui.asPlayer}">Hostess</button><button data-act="setview" data-v="player" aria-pressed="${!!ui.asPlayer}">Mängija</button></div>`}
+  else mc.outerHTML=`<span id="modechip" class="chip">${mode==="shared"?"Kõik telefonid":mode==="local"?"Üks telefon":"Laadin…"}</span>`;
+  $("#tabs").innerHTML=[...(isHost&&mode?[{k:"host",tab:"Host"}]:[]),{k:"home",tab:"Avaleht"},...visGames()].map(g=>`<button class="tab ${g.c?"g":""} ${g.c&&locked(g.k)?"lockd":""}" ${g.c?`style="--tc:${g.c};--tf:${g.f}"`:""} data-act="view" data-k="${g.k}" ${ui.view===g.k?'aria-current="page"':""}>${g.c&&locked(g.k)?"🔒 ":""}${esc(g.tab)}</button>`).join("");
+  const fa=document.activeElement,fid=fa&&fa.id,sel=fa&&typeof fa.selectionStart==="number"?[fa.selectionStart,fa.selectionEnd]:null;
+  let body;
+  if(!mode)body=$("#main").innerHTML;
+  else if(ui.screen)body=screenView();
+  else if(mode==="shared"&&db&&db.fb&&ui.stLoaded&&!ui.stExists)body=setupCard();
+  else if(mode==="shared"&&canWrite&&!S.players[me])body=joinCard();
+  else{const V={host:isHost?hostView:homeView,home:homeView,awards:awardsView,feud:feudView,roulette:rouletteView,bingo:bingoView,gifts:giftsView,capsule:capsuleView,wishes:wishesView}[ui.view]||homeView;const gm=GAMES.find(x=>x.k===ui.view);body=banner()+(gm?`<div class="gamehead" style="--gc:${gm.c}" aria-hidden="true"></div>`:"")+(gm&&locked(gm.k)?lockedCard(gm):V())}
+  $("#tabs").hidden=mode==="shared"&&(canWrite&&!S.players[me]||(db&&db.fb&&ui.stLoaded&&!ui.stExists));
+  $("#main").innerHTML=body;
+  const hb=$("#hostbar"),hh=isHost&&mode&&!ui.screen?hostHTML():"";hb.innerHTML=hh;hb.hidden=!hh;
+  if(fid){const el=document.getElementById(fid);if(el&&el!==document.activeElement){el.focus({preventScroll:true});if(sel)try{el.setSelectionRange(sel[0],sel[1])}catch(e){}}}
+  drawWheel();
+}
+
+/* ---------- wheel ---------- */
+function drawWheel(){
+  const c=$("#wheel");if(!c)return;
+  const size=c.clientWidth||300,dpr=window.devicePixelRatio||1;c.width=size*dpr;c.height=size*dpr;
+  const g=c.getContext("2d");g.scale(dpr,dpr);const r=size/2,n=WHEEL.length,seg=2*Math.PI/n;
+  const fills=["#692C38","#193C32","#C6AA78","#14213D"],txt=["#F5F0E7","#F5F0E7","#14213D","#F5F0E7"];
+  for(let i=0;i<n;i++){const a0=-Math.PI/2+i*seg;g.beginPath();g.moveTo(r,r);g.arc(r,r,r,a0,a0+seg);g.closePath();g.fillStyle=fills[i%4];g.fill();
+    g.save();g.translate(r,r);g.rotate(a0+seg/2);g.textAlign="right";g.textBaseline="middle";g.fillStyle=txt[i%4];g.font=`600 ${Math.round(size/22)}px Manrope, system-ui, sans-serif`;g.fillText(WHEEL[i].s,r-14,0);g.restore()}
+  g.beginPath();g.arc(r,r,r-1,0,2*Math.PI);g.strokeStyle="rgba(0,0,0,.25)";g.lineWidth=2;g.stroke();
+}
+function spin(){
+  if(ui.spinning)return;
+  const n=WHEEL.length,seg=360/n,k=Math.floor(Math.random()*n),jit=(Math.random()-.5)*seg*.6;
+  const base=ui.rot-(((ui.rot%360)+360)%360);const target=base+360*(reduced?1:6)+(360-(k+.5)*seg)+jit;
+  const c=$("#wheel"),dur=reduced?500:4200;ui.result=null;
+  const btn=document.querySelector('[data-act="spin"]');if(btn)btn.disabled=true;
+  const res=document.querySelector(".result");if(res)res.remove();
+  ui.spinning=true;
+  c.style.transition=`transform ${dur}ms cubic-bezier(.12,.7,.08,1)`;requestAnimationFrame(()=>{c.style.transform=`rotate(${target}deg)`});
+  setTimeout(()=>{ui.rot=target;ui.spinning=false;ui.result=k;
+    const who=actor()||(mode==="local"?"l"+Date.now():null);
+    if(mode==="local"){S.spins[who]={r:k,t:Date.now()};const ks=Object.keys(S.spins).sort((a,b)=>S.spins[b].t-S.spins[a].t);ks.slice(8).forEach(x=>delete S.spins[x]);saveLocal()}
+    else if(canWrite&&S.players[me])put("spins",me,{r:k,t:Date.now()});
+    render()},dur+60);
+}
+
+/* ---------- actions ---------- */
+const ACT={
+  view:d=>{ui.view=d.k;ui.confirm=null;render();scrollTo({top:0})},
+  hue:d=>{ui.hue=+d.h;render()},
+  saveinfo:()=>{const f=S.state.info||{},g=k=>String(ui.drafts["info-"+k]??f[k]??"").slice(0,1500);setState({info:{when:g("when"),bring:g("bring"),other:g("other")}});["when","bring","other"].forEach(k=>delete ui.drafts["info-"+k]);toast("Info on kõigi avalehel")},
+  askrel:d=>{ui.confirm={rel:d.p};render()},
+  rel:d=>{const p=d.p,g=guestOf(p);ui.confirm=null;if(db&&db.fb&&g)write("taken/"+g,null);put("players",p,null);toast("Nimi on vaba")},
+  addguest:()=>{const n=(ui.drafts.addguest||"").trim();if(!n)return;if(guests().some(g=>norm2(g.name)===norm2(n)))return toast("See nimi on juba nimekirjas");
+    const id="g"+Date.now().toString(36),h=setGuestCode(id,newCode());setState({guests:[...guests(),{id,name:n.slice(0,24),h}]});ui.drafts.addguest="";render();document.getElementById("addguest")?.focus()},
+  regencode:d=>{const h=setGuestCode(d.g,newCode());setState({guests:guests().map(g=>g.id===d.g?{...g,h}:g)});toast("Uus kood tehtud")},
+  copycodes:()=>{const t=guests().map(g=>g.name+": "+(codes()[g.id]||"–")).join("\n");try{navigator.clipboard.writeText(t).then(()=>toast("Koodid kopeeritud"),()=>toast("Kopeerimine ei õnnestunud"))}catch(e){toast("Kopeerimine ei õnnestunud")}},
+  delguest:d=>{const cc={...codes()};delete cc[d.g];put("gifts","_codes",{...(S.gifts._codes||{}),map:cc});const m={...plan()};delete m[d.g];for(const k of Object.keys(m))if(m[k]===d.g)delete m[k];put("gifts","_plan",{map:m});setState({guests:guests().filter(g=>g.id!==d.g)});syncGifts()},
+  setup:()=>{const code=ccode(ui.drafts.setupcode||"");if(code.length<4){ui.joinErr="Pane endale vähemalt 4-täheline kood.";return render()}
+    const hi=+(ui.drafts.setupwho??0),map={};
+    const gs=SEED.guests.map((g,i)=>{const id="g"+String(i+1).padStart(2,"0"),c=i===hi?code:newCode();map[id]=c;return{id,name:g.name,h:chash(id,c),...(g.noGift?{noGift:true}:{}),...(i===hi?{host:true}:{})}});
+    const hid=gs[hi].id,state={...DEF,guests:gs,bingoList:SEED.bingo.length>=9?SEED.bingo:null,feudList:SEED.feud.length?SEED.feud:null};
+    ui.joining=true;ui.joinErr=null;render();
+    db.setup(state,{map,host:hid}).then(()=>db.join(hid,code,{name:gs[hi].name,hue:0,t:Date.now(),host:true,guest:hid})).then(()=>location.reload())
+      .catch(e=>{console.error(e);ui.joining=false;ui.joinErr="Seadistamine ei õnnestunud. Kontrolli, et Firebase'i reeglid on avaldatud, ja proovi uuesti.";render()})},
+  pickguest:d=>{ui.joinGuest=d.g;ui.joinErr=null;render()},
+  joinother:()=>{ui.joinOther=true;ui.joinGuest=null;render()},
+  joinlist:()=>{ui.joinOther=false;render()},
+  join:()=>{const gid=ui.joinGuest&&((db&&db.fb)||!takenGuests().has(ui.joinGuest))?ui.joinGuest:null;
+    if(!gid){ui.joinErr="Vajuta kõigepealt oma nimele.";return render()}
+    const g=guests().find(x=>x.id===gid),c=ui.drafts.joincode||"";
+    if(!g||(!(db&&db.fb)&&(!g.h||chash(gid,c)!==g.h))){ui.joinErr="See kood ei sobi sellele nimele. Kontrolli koodi või küsi seda Anettilt.";return render()}
+    const n=g.name;if(!(db&&db.fb)&&pids().some(p=>p!==me&&S.players[p].active!==false&&(guestOf(p)===gid))){ui.joinErr="Selle nimega on keegi juba liitunud. Kui see oled sina, küsi Anettilt abi.";return render()}
+    ui.joinErr=null;const host=!!g.host;if(host){ui.view="host";ui.hostInit=true}
+    const pd={name:n.slice(0,24),hue:ui.hue??0,t:Date.now(),host,guest:gid};
+    if(db&&db.fb){ui.joining=true;render();db.join(gid,ccode(c),pd).then(()=>location.reload()).catch(e=>{ui.joining=false;const pd2=e&&e.code==="permission-denied";ui.joinErr=(g.h&&chash(gid,c)!==g.h)?"See kood ei sobi sellele nimele. Kontrolli koodi või küsi seda Anettilt.":pd2?"Kood on õige, aga andmebaas ei lase sisse (reeglid). Anna Anettile teada.":"Liitumine ei õnnestunud ("+((e&&e.code)||"viga")+"). Proovi uuesti.";render()});return}
+    put("players",me,pd);ui.joinGuest=null;delete ui.drafts.joincode;toast("Tere tulemast, "+n+"!")},
+  asklogout:()=>{ui.confirm={logout:true};render()},
+  logout:()=>{if(db&&db.fb){db.leave(guestOf(me)).then(()=>location.reload()).catch(()=>toast("Väljalogimine ei õnnestunud. Proovi uuesti."));return}ui.confirm=null;ui.asPlayer=false;ui.hostInit=false;ui.role=false;isHost=false;ui.view="home";ui.drafts={};put("players",me,null);scrollTo({top:0});toast("Oled välja logitud")},
+  setview:d=>{const p=d.v==="player";if(p===!!ui.asPlayer)return;ACT.asplayer()},
+  asplayer:()=>{ui.asPlayer=!ui.asPlayer;ui.view=ui.asPlayer?(S.state.round!=="home"?S.state.round:"home"):"host";render();scrollTo({top:0})},
+  addp:()=>{const n=(ui.drafts.addname||"").trim();if(!n)return;const used=new Set(pids().map(p=>S.players[p].hue));let h=HUES.findIndex((_,i)=>!used.has(i));if(h<0)h=pids().length%HUES.length;
+    put("players","p"+Date.now().toString(36)+Math.floor(Math.random()*1e3),{name:n.slice(0,24),hue:h,t:Date.now()});ui.drafts.addname="";render();document.getElementById("addname")?.focus()},
+  askrm:d=>{ui.confirm={rm:d.p};render()},
+  rm:d=>removePlayer(d.p),
+  cancel:()=>{ui.confirm=null;render()},
+  askreset:()=>{ui.confirm={reset:true};render()},
+  reset:()=>resetGame(),
+  mode:()=>switchMode(mode==="shared"?"local":"shared"),
+  screen:()=>{location.hash="ekraan"},
+  exitscreen:()=>{location.hash="";ui.screen=false;render()},
+  savelink:()=>{const v=(ui.drafts.linkin??S.state.link).trim();setState({link:v});toast(v?"QR-kood on valmis":"Link eemaldatud")},
+  spot:d=>{spotlight(d.k);if(d.k==="home"&&ui.view!=="host"){ui.view="home"}},
+  adv:d=>advance(d.k), back:d=>back(d.k),
+  showall:()=>setState({shown:feudBoard(S.state.fq||0).map((_,i)=>i)}),
+  slot:d=>{const r=+d.r,sh=[...(S.state.shown||[])];const i=sh.indexOf(r);i<0?sh.push(r):sh.splice(i,1);setState({shown:sh})},
+  turn:d=>{ui.turn=d.p;for(const k of Object.keys(ui.drafts))if(/^[qc]\d+$/.test(k))delete ui.drafts[k];render()},
+  unturn:()=>{ui.turn=null;render()},
+  vote:d=>{const a=actor();if(!a)return;const i=+d.i;if(revd(i))return;const v=JSON.parse(JSON.stringify(S.votes[a]||{}));v.awards={...(v.awards||{}),[i]:d.v};put("votes",a,v)},
+  pa:d=>{const i=Math.max(0,Math.min(AWARDS.length,(S.state.pa||0)+(+d.d)));setState({pa:i,ps:0})},
+  pstep:()=>{const i=S.state.pa||0,n=tally(i).length,st=(S.state.ps||0)+1,r=[...(S.state.rev||[])];if(st>=n&&!r.includes(i))r.push(i);setState({ps:st,rev:r})},
+  fnext:()=>{const b=feudBoard(S.state.fq||0),sh=[...(S.state.shown||[])];for(let r=b.length-1;r>=0;r--){if(!sh.includes(r)){sh.push(r);break}}setState({shown:sh})},
+  present:()=>{ui.view="awards";location.hash="ekraan"},
+  savefeudq:()=>{const raw=ui.drafts.feudedit??FQ().join("\n");const l=raw.split("\n").map(x=>x.trim().slice(0,140)).filter(Boolean).slice(0,30);
+    if(!l.length)return toast("Lisa vähemalt üks küsimus");delete ui.drafts.feudedit;setState({feudList:l,fq:Math.min(S.state.fq||0,l.length-1),shown:[]});toast("Küsimused salvestatud")},
+  feuddefault:()=>{delete ui.drafts.feudedit;setState({feudList:null,fq:0,shown:[]});toast("Algsed küsimused taastatud")},
+  wadd:()=>{const a=actor();if(!a)return;const t=(ui.drafts.wtext||"").trim();if(!t){toast("Kirjuta soov");document.getElementById("wtext")?.focus();return}
+    const items=[...wishItems(a),{id:Date.now().toString(36)+Math.floor(Math.random()*1e3),t:t.slice(0,120),link:(ui.drafts.wlink||"").trim().slice(0,400)}].slice(0,40);
+    ui.drafts.wtext="";ui.drafts.wlink="";put("wishes",a,{items});toast("Soov lisatud");setTimeout(()=>document.getElementById("wtext")?.focus(),0)},
+  wdel:d=>{const a=actor();if(!a)return;put("wishes",a,{items:wishItems(a).filter(x=>x.id!==d.id)})},
+  wclaim:d=>{const a=actor();if(!a||mode!=="shared")return;const c=[...myClaims()],i=c.indexOf(d.k);
+    if(i<0){if(claimedBy(d.k))return toast("Keegi juba ostab selle");c.push(d.k)}else c.splice(i,1);put("claims",a,{c})},
+  togopen:d=>{const o={...(S.state.opened||{})};o[d.k]=!o[d.k];setState({opened:o});const g=GAMES.find(x=>x.k===d.k);toast(o[d.k]?g.n+" on nüüd kõigile lahti":g.n+" on lukus")},
+  savebingo:()=>{const raw=ui.drafts.bingoedit??bingoItems().join("\n");const l=raw.split("\n").map(x=>x.trim().slice(0,70)).filter(Boolean).slice(0,60);
+    if(l.length<9)return toast("Bingo jaoks on vaja vähemalt 9 ruutu");delete ui.drafts.bingoedit;resetMarks();setState({bingoList:l});toast("Bingo on uuendatud")},
+  bingodefault:()=>{delete ui.drafts.bingoedit;resetMarks();setState({bingoList:null});toast("Algsed ruudud taastatud")},
+  rev:d=>{const i=+d.i,r=[...(S.state.rev||[])];const k=r.indexOf(i);k<0?r.push(i):r.splice(k,1);setState({rev:r})},
+  savefeud:()=>{const a=actor();if(!a)return;const cur=S.feud[a]?.a||[];const arr=FQ().map((_,i)=>(ui.drafts["q"+i]??cur[i]??"").trim().slice(0,60));
+    FQ().forEach((_,i)=>delete ui.drafts["q"+i]);if(mode==="local")ui.turn=null;put("feud",a,{a:arr,t:Date.now()});toast("Vastused salvestatud")},
+  savecap:()=>{const a=actor();if(!a)return;const cur=S.capsule[a]?.a||[];const arr=CAPSULE.map((_,i)=>(ui.drafts["c"+i]??cur[i]??"").trim().slice(0,280));
+    CAPSULE.forEach((_,i)=>delete ui.drafts["c"+i]);if(mode==="local")ui.turn=null;put("capsule",a,{a:arr,t:Date.now()});toast("Ennustused on kapslis")},
+  sq:d=>{const a=actor();if(!a)return;const pos=+d.pos,prev=S.bingo[a]||{m:[],at:null};let m=[...(prev.m||[])];const i=m.indexOf(pos);i<0?m.push(pos):m.splice(i,1);
+    const has=bingoLines(m).length>0;const at=has?(prev.at||Date.now()):null;if(has&&!prev.at)toast("BINGO! Hüüa see valjusti välja!");put("bingo",a,{m,at})},
+  spin:()=>spin(),
+  toastpick:()=>{const ps=pids();if(!ps.length)return;let p=ps[Math.floor(Math.random()*ps.length)];if(ps.length>1&&p===S.state.toast)p=ps[(ps.indexOf(p)+1)%ps.length];setState({toast:p})},
+  askcap:()=>{ui.confirm={cap:true};render()},
+  capopen:()=>{ui.confirm=null;ui.capView=true;render()},
+  capclose:()=>{ui.capView=false;if(S.state.capOpen)setState({capOpen:false});else render()},
+  capscreen:()=>setState({capOpen:!S.state.capOpen})
+};
+document.addEventListener("click",e=>{const b=e.target.closest("[data-act]");if(!b||b.tagName==="FORM")return;if(b.tagName==="A")e.preventDefault();const f=ACT[b.dataset.act];if(f)f(b.dataset,b)});
+document.addEventListener("submit",e=>{e.preventDefault();const f=ACT[e.target.dataset.act];if(f)f(e.target.dataset,e.target)});
+document.addEventListener("change",e=>{const t=e.target;if(!t.dataset)return;
+  if(t.dataset.actChange==="assign"){const m={...plan()};if(t.value)m[t.dataset.g]=t.value;else delete m[t.dataset.g];put("gifts","_plan",{map:m});syncGifts()}
+  if(t.dataset.actChange==="nogift"){const gs=guests().map(g=>g.id===t.dataset.g?{...g,noGift:!t.checked}:g);setState({guests:gs})}});
+document.addEventListener("input",e=>{if(e.target.id)ui.drafts[e.target.id]=e.target.value;if(e.target.id==="joinname"){const b=document.querySelector(".joinbb .bb");if(b)b.textContent=(e.target.value.trim()[0]||"?").toUpperCase()}});
+addEventListener("hashchange",()=>{ui.screen=location.hash==="#ekraan";render()});
+
+/* ---------- boot ---------- */
+(function(){const cs=["#C6AA78","#b9505f","#F5F0E7","#6fa58b"];let h=`<path d="M0 6 Q50 34 100 8 T200 8 T300 8 T400 6" fill="none" stroke="#C6AA78" stroke-opacity=".55" stroke-width="1"/>`;
+  for(let i=0;i<20;i++){const x=10+i*20,t=(x%100)/100,y=7+26*4*t*(1-t)*.9+3;h+=`<line x1="${x}" y1="${y-4}" x2="${x}" y2="${y}" stroke="#C6AA78" stroke-opacity=".5"/><circle cx="${x}" cy="${y+3}" r="3.2" fill="${cs[i%4]}" style="animation-delay:${(i*.37)%2.6}s;filter:drop-shadow(0 0 3px ${cs[i%4]})"/>`}
+  $("#garland").innerHTML=h})();
+(async function(){
+  try{if(window.claude&&claude.use){db=await claude.use("db");user=await claude.use("user")}}catch(e){db=null}
+  dbAvail=!!(db&&user);
+  if(dbAvail&&lsGet("cc_mode")!=="local")await startShared();else startLocal();
+})();
+</script>
+
+</body>
+</html>
